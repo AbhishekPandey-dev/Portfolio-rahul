@@ -40,7 +40,7 @@ export default function Home() {
         
         {/* Spline 3D Scene Container */}
         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[800px] h-[800px] lg:w-[1000px] lg:h-[1000px] z-10 pointer-events-none hidden md:block translate-x-[12%]">
-          <div className="w-full h-full pointer-events-auto transform scale-[1.5] lg:scale-[1.5] translate-x-15 -translate-y-12">
+          <div className="w-full h-full pointer-events-auto transform scale-[1.2] lg:scale-[1.2] translate-x-12 -translate-y-4">
             <SplineScene />
           </div>
         </div>
@@ -92,46 +92,49 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Card 1 (Large) */}
-          <Link href="/work/luxe-fashion" className="md:col-span-8 group cursor-pointer block">
+          <Link href="https://transformhealthcoalition.org/" className="md:col-span-8 group cursor-pointer block" target="_blank" rel="noopener noreferrer">
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <Image alt="Luxe Fashion Store background" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2000&auto=format&fit=crop" fill sizes="(max-width: 768px) 100vw, 66vw" />
+              <Image alt="Transform Health" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="/assets/transformhealth.png" fill sizes="(max-width: 768px) 100vw, 66vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Shopify</span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">Luxe Fashion Store</h3>
+                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Wordpress | UI/UX Design | GSAP | MySQL | Cloudflare</span>
+                <h3 className="font-headline text-4xl font-bold text-white uppercase">www.transformhealthcoalition.org</h3>
               </div>
             </div>
             <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">Luxe Fashion Store</h4>
+              <h4 className="font-headline text-2xl font-bold uppercase">Transform Health</h4>
               <span className="material-symbols-outlined text-primary">arrow_outward</span>
             </div>
           </Link>
 
           {/* Card 2 (Small) */}
-          <Link href="/work/techvault" className="md:col-span-4 group cursor-pointer block">
+          <Link href="https://www.nappadori.com/" className="md:col-span-4 group cursor-pointer block" target="_blank" rel="noopener noreferrer">
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <Image alt="TechVault Interface background" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=2000&auto=format&fit=crop" fill sizes="(max-width: 768px) 100vw, 33vw" />
+              <Image alt="Nappa dori Interface background" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="/assets/nappadori.png" fill sizes="(max-width: 768px) 100vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">UI/UX Design</span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">TechVault App</h3>
+                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">UI/UX Design | Shopify | GSAP | React | Photoswipe</span>
+                <h3 className="font-headline text-4xl font-bold text-white uppercase">www.nappadori.com</h3>
               </div>
             </div>
             <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">TechVault App</h4>
+              <h4 className="font-headline text-2xl font-bold uppercase">Nappa dori</h4>
               <span className="material-symbols-outlined text-primary">arrow_outward</span>
             </div>
           </Link>
 
           {/* Card 3 (Wide) */}
-          <Link href="/work/greenleaf" className="md:col-span-12 group cursor-pointer block">
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[500px] mb-6">
-              <Image alt="Organic Grocery background" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2000&auto=format&fit=crop" fill sizes="100vw" />
+          <Link href="https://www.shivanandnarresh.com/" className="md:col-span-12 group cursor-pointer block" target="_blank" rel="noopener noreferrer">
+            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
+              <video autoPlay loop muted className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110">
+                <source src="/assets/shivanandnarresh.webm" type="video/webm" />
+                <source src="/assets/shivanandnarresh.mp4" type="video/mp4" />
+              </video>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">WordPress + WooCommerce</span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">GreenLeaf Organics</h3>
+                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Shopify | jQuery | AWS | Cloudflare | Klaviyo</span>
+                <h3 className="font-headline text-4xl font-bold text-white uppercase">www.shivanandnarresh.com</h3>
               </div>
             </div>
             <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">GreenLeaf Organics</h4>
+              <h4 className="font-headline text-2xl font-bold uppercase">Shivan & Narresh</h4>
               <span className="material-symbols-outlined text-primary">arrow_outward</span>
             </div>
           </Link>
@@ -211,10 +214,10 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-8">
             <p className="text-on-surface-variant text-lg md:text-xl leading-relaxed font-light">
-              I am a full-stack architect specializing in the intersection of high-end aesthetics and technical robustness. My approach is rooted in clean code, editorial design principles, and a relentless focus on performance. 
+              Technical jargon is easy; building something that people actually enjoy using is the hard part. I’m a full-stack architect who cares just as much about the 'vibe' of a site as I do about the performance metrics. 
             </p>
             <p className="text-on-surface-variant text-lg md:text-xl leading-relaxed font-light">
-              Based in India but working globally, I help brands bridge the gap between "good enough" and "industry leading" digital presence.
+              I help global brands move past the generic and create a digital presence that feels human, polished, and built to last.
             </p>
             <Link className="text-primary font-headline font-bold text-xl uppercase inline-flex items-center group w-fit hover:text-white transition-colors" href="/about">
               More About Me 
