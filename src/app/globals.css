@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-tertiary: #ffeeac;
+  --color-surface-container-high: #201f1f;
+  --color-on-background: #ffffff;
+  --color-primary-container: #c6f000;
+  --color-on-error-container: #ffd2c8;
+  --color-surface-bright: #2c2c2c;
+  --color-on-secondary-fixed-variant: #615e00;
+  --color-primary-fixed-dim: #c3ed00;
+  --color-surface: #0e0e0e;
+  --color-surface-container: #1a1919;
+  --color-surface-container-low: #131313;
+  --color-background: #0e0e0e;
+  --color-on-tertiary-fixed: #483d00;
+  --color-secondary-fixed: #eee754;
+  --color-outline-variant: #494847;
+  --color-on-secondary-container: #fffabf;
+  --color-on-primary-container: #465600;
+  --color-on-primary: #4d5f00;
+  --color-secondary-fixed-dim: #e0d947;
+  --color-surface-dim: #0e0e0e;
+  --color-tertiary-container: #fedf46;
+  --color-error-dim: #d53d18;
+  --color-on-surface: #ffffff;
+  --color-error: #ff7351;
+  --color-inverse-surface: #fcf8f8;
+  --color-on-primary-fixed-variant: #556800;
+  --color-on-primary-fixed: #3c4a00;
+  --color-error-container: #b92902;
+  --color-inverse-primary: #536600;
+  --color-on-tertiary-fixed-variant: #695900;
+  --color-on-error: #450900;
+  --color-tertiary-fixed-dim: #efd138;
+  --color-primary-fixed: #d1fc1d;
+  --color-on-tertiary-container: #5e4f00;
+  --color-secondary-dim: #e0d947;
+  --color-secondary-container: #646100;
+  --color-secondary: #eee754;
+  --color-on-surface-variant: #adaaaa;
+  --color-on-tertiary: #675800;
+  --color-outline: #777575;
+  --color-inverse-on-surface: #565554;
+  --color-primary: #d4ff22;
+  --color-tertiary-dim: #efd138;
+  --color-surface-container-lowest: #000000;
+  --color-surface-variant: #262626;
+  --color-on-secondary-fixed: #444100;
+  --color-primary-dim: #c6f000;
+  --color-surface-tint: #d4ff22;
+  --color-surface-container-highest: #262626;
+  --color-on-secondary: #575400;
+  --color-tertiary-fixed: #fedf46;
+
+  --font-headline: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-label: var(--font-inter), sans-serif;
+
+  /* We override border radius to 0px per the design system */
+  --radius-default: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+}
+
+:root {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  color-scheme: dark;
+}
+
+body { 
+  background-color: #0a0a0a; 
+  color: white; 
+  font-family: var(--font-body); 
+  overflow-x: hidden; 
+}
+
+/* Explicit Stitch Styles */
+.headline-massive { 
+  font-family: var(--font-headline); 
+  line-height: 0.85; 
+  letter-spacing: -0.04em; 
+}
+
+.no-scrollbar::-webkit-scrollbar { 
+  display: none; 
+}
+
+.text-outline { 
+  -webkit-text-stroke: 2px rgba(255,255,255,0.3); 
+  color: transparent; 
+}
+
+.editorial-grid { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 2rem; 
+}
+
+.glass-header { 
+  backdrop-filter: blur(24px); 
+  -webkit-backdrop-filter: blur(24px); 
+}
+
+.neon-text-stroke {
+  -webkit-text-stroke: 1px rgba(212, 255, 34, 0.3);
+  color: transparent;
+}
+
+.outline-text, .text-outline-white, .text-stroke {
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+}
+
+.text-huge, .display-text {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(5rem, 15vw, 12rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.underline-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #494847;
+  padding: 0.75rem 0;
+  width: 100%;
+  color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.underline-input:focus {
+  outline: none;
+  border-bottom: 2px solid #D4FF22;
+  box-shadow: none;
+}
+
+select.underline-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23adaaaa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 1.2rem;
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 20px rgba(212, 255, 34, 0.3);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Override tailwind default */
+* {
+  border-radius: 0px;
+}
+.rounded-full {
+  border-radius: 9999px !important;
+}
+
+@keyframes textTypeBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
