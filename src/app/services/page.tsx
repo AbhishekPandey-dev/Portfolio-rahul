@@ -26,7 +26,7 @@ export default function ServicesPage() {
             </div>
             <h2 className="font-headline text-5xl font-bold uppercase tracking-tighter mb-6">Shopify Development</h2>
             <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
-              Elevating e-commerce through bespoke Shopify experiences. I build custom themes that convert and scale, leveraging Liquid and Shopify Plus for enterprise-grade performance.
+              Specializing in Shopify Plus, I build custom themes engineered for performance and scale. I bridge the gap between complex Liquid development and intuitive UI/UX to help e-commerce brands convert more effectively.
             </p>
             <div className="inline-block bg-surface-container-high px-4 py-2 text-primary font-label text-xs uppercase tracking-widest">
               Ideal for: E-commerce brands, fashion labels, D2C startups
@@ -116,7 +116,7 @@ export default function ServicesPage() {
             </div>
             <h2 className="font-headline text-5xl font-bold uppercase tracking-tighter mb-6">UI/UX Design</h2>
             <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
-              Merging aesthetics with psychology. I create intuitive digital interfaces that guide users effortlessly through complex flows while maintaining brand prestige.
+              Design is more than just looks; it’s about how people feel when they use your product. I create seamless digital flows that feel natural to the user, balancing high-end aesthetics with a frictionless experience that builds trust.
             </p>
             <div className="inline-block bg-surface-container-high px-4 py-2 text-primary font-label text-xs uppercase tracking-widest">
               Ideal for: Startups, SaaS products, agencies
@@ -151,7 +151,7 @@ export default function ServicesPage() {
             </div>
             <h2 className="font-headline text-5xl font-bold uppercase tracking-tighter mb-6">E-Commerce Solutions</h2>
             <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
-              Holistic digital retail ecosystems. I design and build end-to-end commerce platforms that handle everything from the first click to the final shipment.
+              I build comprehensive retail systems that connect every dot of the customer journey. From the moment a user lands on your site to the second their order ships, I ensure your technology works in perfect harmony.
             </p>
             <div className="inline-block bg-surface-container px-4 py-2 text-primary font-label text-xs uppercase tracking-widest">
               Ideal for: Online retailers, marketplaces, subscription businesses
@@ -193,10 +193,10 @@ export default function ServicesPage() {
           <div className="max-w-2xl">
             <h3 className="font-headline text-4xl font-bold uppercase mb-6 leading-tight">Every project is unique. I provide custom quotes based on scope, timeline, and complexity.</h3>
           </div>
-          <button className="group relative px-10 py-5 bg-primary text-on-primary font-headline font-bold uppercase tracking-widest text-lg neon-glow">
+          <Link href="/contact" className="group relative px-10 py-5 bg-primary text-on-primary font-headline font-bold uppercase tracking-widest text-lg neon-glow">
             Get a Free Quote →
             <div className="absolute inset-0 border-2 border-primary group-hover:scale-105 transition-transform"></div>
-          </button>
+          </Link>
         </div>
       </section>
 
