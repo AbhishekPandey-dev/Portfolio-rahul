@@ -35,7 +35,7 @@ export default function ProcessPage() {
       </header>
 
       {/* SECTION 3: PROCESS STEPS */}
-      <section className="bg-surface-dim pt-24 pb-48">
+      <section className="bg-surface-dim pt-24 pb-5">
         <div className="space-y-0">
           {/* STEP 01 */}
           <div className="group relative border-t border-white/5 bg-surface-dim hover:bg-surface-container transition-colors duration-700 py-32 px-12 overflow-hidden">
@@ -191,98 +191,8 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      {/* SECTION 4: TIMELINE VISUAL */}
-      <section className="py-32 bg-background px-12">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-xs uppercase tracking-[0.6em] font-bold text-primary mb-24 text-center">Development Lifecycle</h3>
-          <div className="relative pt-12">
-            {/* Timeline Base Line */}
-            <div className="absolute top-0 left-0 w-full h-[1px] bg-white/10"></div>
-            <div className="grid grid-cols-1 md:grid-cols-7 gap-4">
-              {/* Phase 1 */}
-              <div className="relative group">
-                <div className="absolute -top-[1.5px] left-0 w-1/2 h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                <div className="pt-8">
-                  <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest block mb-4">Discovery</span>
-                  <h4 className="text-lg font-headline font-bold text-white mb-1">Week 1</h4>
-                  <div className="w-full h-1 bg-primary/20 rounded-full mt-4">
-                    <div className="h-full bg-primary w-full shadow-[0_0_10px_#d4ff22]"></div>
-                  </div>
-                </div>
-              </div>
-              {/* Phase 2 */}
-              <div className="relative group">
-                <div className="absolute -top-[1.5px] left-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left delay-75"></div>
-                <div className="pt-8">
-                  <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest block mb-4">Strategy</span>
-                  <h4 className="text-lg font-headline font-bold text-white mb-1">Week 1-2</h4>
-                  <div className="w-full h-1 bg-primary/20 rounded-full mt-4">
-                    <div className="h-full bg-primary w-2/3"></div>
-                  </div>
-                </div>
-              </div>
-              {/* Phase 3 */}
-              <div className="relative group">
-                <div className="absolute -top-[1.5px] left-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left delay-100"></div>
-                <div className="pt-8">
-                  <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest block mb-4">Design</span>
-                  <h4 className="text-lg font-headline font-bold text-white mb-1">Week 2-4</h4>
-                  <div className="w-full h-1 bg-primary/20 rounded-full mt-4">
-                    <div className="h-full bg-primary w-3/4"></div>
-                  </div>
-                </div>
-              </div>
-              {/* Phase 4 */}
-              <div className="relative group">
-                <div className="absolute -top-[1.5px] left-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left delay-150"></div>
-                <div className="pt-8">
-                  <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest block mb-4">Development</span>
-                  <h4 className="text-lg font-headline font-bold text-white mb-1">Week 3-6</h4>
-                  <div className="w-full h-1 bg-primary/20 rounded-full mt-4">
-                    <div className="h-full bg-primary w-full"></div>
-                  </div>
-                </div>
-              </div>
-              {/* Phase 5 */}
-              <div className="relative group">
-                <div className="absolute -top-[1.5px] left-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left delay-200"></div>
-                <div className="pt-8">
-                  <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest block mb-4">Testing</span>
-                  <h4 className="text-lg font-headline font-bold text-white mb-1">Week 5-7</h4>
-                  <div className="w-full h-1 bg-primary/20 rounded-full mt-4">
-                    <div className="h-full bg-primary w-1/2"></div>
-                  </div>
-                </div>
-              </div>
-              {/* Phase 6 */}
-              <div className="relative group">
-                <div className="absolute -top-[1.5px] left-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left delay-300"></div>
-                <div className="pt-8">
-                  <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest block mb-4">Launch</span>
-                  <h4 className="text-lg font-headline font-bold text-white mb-1">Week 6-8</h4>
-                  <div className="w-full h-1 bg-primary/20 rounded-full mt-4">
-                    <div className="h-full bg-primary w-1/4"></div>
-                  </div>
-                </div>
-              </div>
-              {/* Phase 7 */}
-              <div className="relative group">
-                <div className="absolute -top-[1.5px] left-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left delay-500"></div>
-                <div className="pt-8">
-                  <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest block mb-4">Support</span>
-                  <h4 className="text-lg font-headline font-bold text-white mb-1">Ongoing</h4>
-                  <div className="w-full h-1 bg-primary/20 rounded-full mt-4">
-                    <div className="h-full bg-primary w-10 overflow-hidden relative">
-                      <div className="absolute inset-0 bg-primary animate-pulse"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* SECTION 4: PLAY GAME */}
+      
       {/* SECTION 5: CTA */}
       <section className="py-48 bg-surface-container relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
