@@ -145,6 +145,25 @@ select.underline-input {
   background-size: 1.2rem;
 }
 
+select.underline-input option {
+  background-color: var(--color-surface-container-low);
+  color: var(--color-on-surface);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+select.underline-input option:hover {
+  background-color: var(--color-surface-container);
+}
+
+select.underline-input option:checked {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
 .neon-text-glow {
   text-shadow: 0 0 20px rgba(212, 255, 34, 0.3);
 }

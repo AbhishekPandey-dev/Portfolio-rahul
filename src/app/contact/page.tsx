@@ -23,7 +23,7 @@ export default function ContactPage() {
           <div className="w-full md:w-[45%]">
             <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase block mb-6">GET IN TOUCH</span>
             <p className="text-on-surface text-lg mb-10 leading-relaxed">
-              Whether you are looking for a bespoke Shopify storefront, a high-performance WordPress site, or a custom application built with precision—I provide UI/UX focused development that converts.
+              Whether you are looking for a bespoke Shopify storefront, a high-performance WordPress site, or a custom application built with precision— I provide UI/UX focused development that converts.
             </p>
             <div className="space-y-8 mb-12">
               <div>
@@ -44,7 +44,7 @@ export default function ContactPage() {
             </div>
             <div className="pt-8 border-t border-outline-variant/20">
               <p className="text-on-surface-variant text-xs uppercase tracking-wider mb-1">Response Policy</p>
-              <p className="text-on-surface-variant text-sm">I typically respond within 24 hours. Available Mon-Sat, 10AM-7PM IST.</p>
+              <p className="text-on-surface-variant text-sm">I typically respond within 24 hours. Available all days.</p>
             </div>
           </div>
           {/* Right Column (Form) */}
@@ -57,7 +57,7 @@ export default function ContactPage() {
                 </div>
                 <div className="relative">
                   <label className="text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Your Email</label>
-                  <input className="underline-input font-body" placeholder="john@example.com" type="email" />
+                  <input className="underline-input font-body" placeholder="john@example.com" type="email" suppressHydrationWarning={true} />
                 </div>
               </div>
               <div className="relative">
@@ -74,16 +74,6 @@ export default function ContactPage() {
                 <label className="text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Tell me about your project</label>
                 <textarea className="underline-input font-body resize-none" placeholder="Briefly describe your goals and timeline..." rows={4}></textarea>
               </div>
-              <div className="relative">
-                <label className="text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Your Budget Range</label>
-                <select className="underline-input font-body" defaultValue="Select a range">
-                  <option disabled>Select a range</option>
-                  <option>$2,000 - $5,000</option>
-                  <option>$5,000 - $10,000</option>
-                  <option>$10,000 - $25,000</option>
-                  <option>$25,000+</option>
-                </select>
-              </div>
               <button className="w-full bg-primary text-on-primary font-headline font-bold uppercase tracking-widest py-5 hover:bg-primary-fixed transition-all hover:scale-[1.01] active:scale-[0.99]" type="submit">
                 Send Message
               </button>
@@ -99,7 +89,7 @@ export default function ContactPage() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
             <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
           </span>
-          <p className="font-headline font-medium text-sm md:text-base uppercase tracking-[0.3em]">Currently available for new projects starting May 2024</p>
+          <p className="font-headline font-medium text-sm md:text-base uppercase tracking-[0.3em]">Currently available for new projects.</p>
         </div>
       </section>
 
@@ -114,7 +104,7 @@ export default function ContactPage() {
                 <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
               </summary>
               <p className="mt-6 text-on-surface-variant leading-relaxed">
-                Most custom projects range from 4 to 8 weeks depending on complexity. Small Shopify setups can be completed in 2-3 weeks, while comprehensive enterprise applications require a more rigorous schedule.
+                Most custom projects range from 2 to 3 weeks depending on complexity. Small Shopify setups can be completed in 1 week, while comprehensive enterprise applications require a more rigorous schedule.
               </p>
             </details>
             <details className="group bg-background p-6 md:p-8 cursor-pointer transition-all hover:bg-surface-container-low">
