@@ -33,11 +33,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${anton.variable} h-full antialiased dark scroll-smooth`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${anton.variable} h-full antialiased dark scroll-smooth overflow-x-hidden`}>
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
-      <body className="min-h-screen flex flex-col selection:bg-primary selection:text-black">
+      <body className="min-h-screen flex flex-col selection:bg-primary selection:text-black overflow-x-hidden bg-background text-on-surface">
         <CustomCursor />
         <Header />
         <main className="flex-grow pt-0">

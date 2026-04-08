@@ -8,7 +8,7 @@ export default function WorkPage() {
       <header className="px-8 mb-24 max-w-[1920px] mx-auto pt-48">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div className="relative">
-            <h1 className="font-headline font-bold text-[100px] md:text-[180px] leading-[0.9] tracking-tighter uppercase">
+            <h1 className="font-headline font-bold text-[clamp(4rem,15vw,100px)] md:text-[180px] leading-[0.9] tracking-tighter uppercase">
               SELECTED
               <br />
               <span className="outline-text">WORK</span>

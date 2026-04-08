@@ -2,18 +2,18 @@ export default function ProcessPage() {
   return (
     <>
       {/* SECTION 2: PAGE HERO */}
-      <header className="relative min-h-[921px] flex flex-col justify-center px-12 pt-32 overflow-hidden">
+      <header className="relative min-h-[921px] flex flex-col justify-center px-6 md:px-12 pt-32 overflow-hidden">
         <div className="absolute top-1/4 left-0 w-full flex justify-between pointer-events-none opacity-20">
           <div className="h-[1px] w-1/4 bg-primary neon-glow"></div>
           <div className="h-[1px] w-1/12 bg-primary neon-glow"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto w-full">
           <div className="flex flex-col">
-            <h1 className="font-headline font-bold text-[140px] md:text-[200px] leading-[0.8] tracking-tighter text-white">
+            <h1 className="font-headline font-bold text-[clamp(4.5rem,18vw,140px)] md:text-[200px] leading-[0.8] tracking-tighter text-white">
               HOW I
             </h1>
             <div className="flex items-center gap-12 mt-4 md:ml-48">
-              <h1 className="font-headline font-bold text-[140px] md:text-[200px] leading-[0.8] tracking-tighter text-primary">
+              <h1 className="font-headline font-bold text-[clamp(4.5rem,18vw,140px)] md:text-[200px] leading-[0.8] tracking-tighter text-primary">
                 WORK
               </h1>
               <div className="hidden lg:block w-32 h-[2px] bg-primary/30"></div>
@@ -38,7 +38,7 @@ export default function ProcessPage() {
       <section className="bg-surface-dim pt-24 pb-5">
         <div className="space-y-0">
           {/* STEP 01 */}
-          <div className="group relative border-t border-white/5 bg-surface-dim hover:bg-surface-container transition-colors duration-700 py-32 px-12 overflow-hidden">
+          <div className="group relative border-t border-white/5 bg-surface-dim hover:bg-surface-container transition-colors duration-700 py-32 px-6 md:px-12 overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12 relative z-10">
               <div className="w-full md:w-1/4">
                 <span className="text-[100px] font-headline font-bold text-primary leading-none">01</span>
@@ -62,7 +62,7 @@ export default function ProcessPage() {
           </div>
 
           {/* STEP 02 */}
-          <div className="group relative border-t border-white/5 bg-surface-container-low hover:bg-surface-container transition-colors duration-700 py-32 px-12 overflow-hidden">
+          <div className="group relative border-t border-white/5 bg-surface-container-low hover:bg-surface-container transition-colors duration-700 py-32 px-6 md:px-12 overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12 relative z-10">
               <div className="w-full md:w-1/4">
                 <span className="text-[100px] font-headline font-bold text-primary leading-none">02</span>
@@ -83,7 +83,7 @@ export default function ProcessPage() {
           </div>
 
           {/* STEP 03 */}
-          <div className="group relative border-t border-white/5 bg-surface-container-high hover:bg-surface-container-highest transition-colors duration-700 py-32 px-12 overflow-hidden">
+          <div className="group relative border-t border-white/5 bg-surface-container-high hover:bg-surface-container-highest transition-colors duration-700 py-32 px-6 md:px-12 overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12 relative z-10">
               <div className="w-full md:w-1/4">
                 <span className="text-[100px] font-headline font-bold text-primary leading-none">03</span>
@@ -105,7 +105,7 @@ export default function ProcessPage() {
           </div>
 
           {/* STEP 04 */}
-          <div className="group relative border-t border-white/5 bg-surface-container-high hover:bg-surface-container-highest transition-colors duration-700 py-32 px-12 overflow-hidden">
+          <div className="group relative border-t border-white/5 bg-surface-container-high hover:bg-surface-container-highest transition-colors duration-700 py-32 px-6 md:px-12 overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12 relative z-10">
               <div className="w-full md:w-1/4">
                 <span className="text-[100px] font-headline font-bold text-primary leading-none">04</span>
@@ -127,7 +127,7 @@ export default function ProcessPage() {
           </div>
 
           {/* STEP 05 */}
-          <div className="group relative border-t border-white/5 bg-surface-container-low hover:bg-surface-container transition-colors duration-700 py-32 px-12 overflow-hidden">
+          <div className="group relative border-t border-white/5 bg-surface-container-low hover:bg-surface-container transition-colors duration-700 py-32 px-6 md:px-12 overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12 relative z-10">
               <div className="w-full md:w-1/4">
                 <span className="text-[100px] font-headline font-bold text-primary leading-none">05</span>
@@ -148,7 +148,7 @@ export default function ProcessPage() {
           </div>
 
           {/* STEP 06 */}
-          <div className="group relative border-t border-white/5 bg-surface-dim hover:bg-surface-container transition-colors duration-700 py-32 px-12 overflow-hidden">
+          <div className="group relative border-t border-white/5 bg-surface-dim hover:bg-surface-container transition-colors duration-700 py-32 px-6 md:px-12 overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12 relative z-10">
               <div className="w-full md:w-1/4">
                 <span className="text-[100px] font-headline font-bold text-primary leading-none">06</span>
@@ -169,7 +169,7 @@ export default function ProcessPage() {
           </div>
 
           {/* STEP 07 */}
-          <div className="group relative border-y border-white/5 bg-surface-container-low hover:bg-surface-container transition-colors duration-700 py-32 px-12 overflow-hidden">
+          <div className="group relative border-y border-white/5 bg-surface-container-low hover:bg-surface-container transition-colors duration-700 py-32 px-6 md:px-12 overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12 relative z-10">
               <div className="w-full md:w-1/4">
                 <span className="text-[100px] font-headline font-bold text-primary leading-none">07</span>
@@ -198,13 +198,13 @@ export default function ProcessPage() {
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-stroke font-headline">START</div>
         </div>
-        <div className="max-w-4xl mx-auto px-12 text-center relative z-10">
+        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10">
           <h2 className="text-6xl md:text-8xl font-headline font-bold text-white mb-12 tracking-tighter">Ready to start your project?</h2>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <a href="/contact" className="w-full md:w-auto bg-primary text-zinc-950 px-12 py-6 font-bold font-['Space_Grotesk'] uppercase text-lg tracking-widest hover:translate-y-[-4px] hover:shadow-[0_10px_40px_rgba(212,255,34,0.3)] transition-all duration-300">
+            <a href="/contact" className="w-full md:w-auto bg-primary text-zinc-950 px-6 md:px-12 py-6 font-bold font-['Space_Grotesk'] uppercase text-lg tracking-widest hover:translate-y-[-4px] hover:shadow-[0_10px_40px_rgba(212,255,34,0.3)] transition-all duration-300">
               Let&apos;s Talk →
             </a>
-            <a href="/work" className="w-full md:w-auto border-2 border-white text-white px-12 py-6 font-bold font-['Space_Grotesk'] uppercase text-lg tracking-widest hover:bg-white hover:text-zinc-950 hover:translate-y-[-4px] transition-all duration-300">
+            <a href="/work" className="w-full md:w-auto border-2 border-white text-white px-6 md:px-12 py-6 font-bold font-['Space_Grotesk'] uppercase text-lg tracking-widest hover:bg-white hover:text-zinc-950 hover:translate-y-[-4px] transition-all duration-300">
               View my work →
             </a>
           </div>

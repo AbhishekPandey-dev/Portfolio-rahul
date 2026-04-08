@@ -5,7 +5,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* SECTION 2: Hero */}
-      <header className="pt-48 pb-32 px-8 max-w-screen-2xl mx-auto">
+      <header className="pt-48 pb-32 px-6 md:px-12 max-w-screen-2xl mx-auto">
         <div className="flex flex-col md:flex-row items-end justify-between gap-8">
           <h1 className="font-headline font-bold text-huge uppercase">
             WHAT I<br/><span className="text-primary">OFFER</span>
@@ -17,7 +17,7 @@ export default function ServicesPage() {
       </header>
 
       {/* SECTION 3: Service 01 - Shopify */}
-      <section className="bg-surface-container py-32 px-8">
+      <section className="bg-surface-container py-32 px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-6 mb-8">
@@ -62,7 +62,7 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 4: Service 02 - WordPress */}
-      <section className="bg-surface py-32 px-8">
+      <section className="bg-surface py-32 px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 flex-row-reverse">
           <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4 order-2 lg:order-1">
             <div className="bg-surface-container-low p-8 hover:bg-surface-container-high transition-all group border-l border-primary/20">
@@ -107,7 +107,7 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 5: Service 03 - UI/UX */}
-      <section className="bg-surface-container-low py-32 px-8">
+      <section className="bg-surface-container-low py-32 px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-6 mb-8">
@@ -134,7 +134,7 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 6: Service 04 - E-Commerce */}
-      <section className="bg-surface py-32 px-8">
+      <section className="bg-surface py-32 px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 flex-row-reverse">
           <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4 order-2 lg:order-1">
             {["Full Store Setup", "Payment Integration", "Shipping Config", "Conversion Optimization", "Analytics Setup", "Multi-currency Support"].map((item, i) => (
@@ -161,7 +161,7 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 7: Service 05 - Maintenance */}
-      <section className="bg-surface-container-highest py-32 px-8">
+      <section className="bg-surface-container-highest py-32 px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-6 mb-8">
@@ -188,7 +188,7 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 8: Pricing Philosophy */}
-      <section className="py-32 px-8 border-y border-outline-variant/10 bg-surface-dim">
+      <section className="py-32 px-6 md:px-12 border-y border-outline-variant/10 bg-surface-dim">
         <div className="max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="max-w-2xl">
             <h3 className="font-headline text-4xl font-bold uppercase mb-6 leading-tight">Every project is unique. I provide custom quotes based on scope, timeline, and complexity.</h3>
@@ -201,11 +201,11 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 9: Final CTA */}
-      <section className="py-48 px-8 text-center bg-surface relative overflow-hidden">
+      <section className="py-48 px-6 md:px-12 text-center bg-surface relative overflow-hidden">
         {/* Ambient Glow Decorations */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 blur-[120px]"></div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h2 className="font-headline font-bold text-8xl md:text-9xl uppercase tracking-tighter mb-12">Ready to start your project?</h2>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h2 className="font-headline font-bold text-[clamp(4rem,15vw,6rem)] md:text-9xl uppercase tracking-tighter mb-12">Ready to start your project?</h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <Link href="/contact" className="w-full md:w-auto bg-primary text-on-primary px-12 py-6 font-headline font-bold uppercase tracking-widest text-xl hover:translate-y-[-4px] transition-transform">
               Let&apos;s Talk

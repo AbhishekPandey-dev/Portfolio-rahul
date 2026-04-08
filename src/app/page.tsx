@@ -39,14 +39,14 @@ export default function Home() {
         </div>
         
         {/* Spline 3D Scene Container */}
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[800px] h-[800px] lg:w-[1000px] lg:h-[1000px] z-10 pointer-events-none hidden md:block translate-x-[12%]">
-          <div className="w-full h-full pointer-events-auto transform scale-[1.2] lg:scale-[1.2] translate-x-12 -translate-y-4">
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-full h-[50vh] md:w-[800px] md:h-[800px] lg:w-[1000px] lg:h-[1000px] z-10 pointer-events-none md:block md:translate-x-[12%] opacity-40 md:opacity-100 mt-20 md:mt-0">
+          <div className="w-full h-full pointer-events-auto transform scale-[0.8] md:scale-[1.2] lg:scale-[1.2] md:translate-x-12 md:-translate-y-4">
             <SplineScene />
           </div>
         </div>
 
-        <div className="relative z-20 w-full max-w-7xl pointer-events-none">
-          <h1 className="headline-massive text-[80px] md:text-[180px] lg:text-[220px] font-bold text-white uppercase flex flex-col mb-4">
+        <div className="relative z-20 w-full max-w-7xl pointer-events-none pt-24 md:pt-0">
+          <h1 className="headline-massive text-[clamp(4.5rem,15vw,80px)] md:text-[180px] lg:text-[220px] font-bold text-white uppercase flex flex-col mb-4">
             <span>RAHUL</span>
             <span className="text-outline">SHARMA</span>
           </h1>
@@ -195,7 +195,7 @@ export default function Home() {
       <section className="py-32 px-6 md:px-12 bg-surface-container-lowest">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           <div className="relative">
-            <div className="text-[200px] font-headline font-bold text-white/5 absolute -top-20 -left-10 select-none">7+</div>
+            <div className="text-[120px] md:text-[200px] font-headline font-bold text-white/5 absolute -top-12 md:-top-20 -left-6 md:-left-10 select-none">7+</div>
             <div className="relative z-10">
               <h2 className="font-headline text-5xl md:text-6xl font-bold uppercase tracking-tighter mb-8 leading-tight">
                 Years of Digital <br/> Excellence

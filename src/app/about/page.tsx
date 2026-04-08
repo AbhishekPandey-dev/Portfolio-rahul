@@ -6,9 +6,9 @@ export default function AboutPage() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="px-12 py-24 md:py-40 max-w-[1920px] mx-auto overflow-hidden">
+      <section className="px-6 md:px-12 py-24 md:py-40 max-w-[1920px] mx-auto overflow-hidden">
         <div className="relative">
-          <h1 className="font-headline font-bold text-[120px] md:text-[240px] leading-[0.8] tracking-[-0.06em] uppercase">
+          <h1 className="font-headline font-bold text-[clamp(4.5rem,18vw,120px)] md:text-[240px] leading-[0.8] tracking-[-0.06em] uppercase">
             ABOUT
             <br />
             <span className="text-primary relative">
@@ -26,7 +26,7 @@ export default function AboutPage() {
 
       {/* STORY / BIO SECTION */}
       <section className="bg-surface-container py-32">
-        <div className="px-12 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-20">
+        <div className="px-6 md:px-12 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-20">
           <div className="md:col-span-5 relative group">
             <div className="aspect-[3/4] bg-surface-container-highest overflow-hidden">
               <Image
@@ -77,7 +77,7 @@ export default function AboutPage() {
 
       {/* STATS ROW */}
       <section className="py-20 border-y border-outline-variant/10">
-        <div className="px-12 max-w-[1920px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
+        <div className="px-6 md:px-12 max-w-[1920px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
           <div className="text-center">
             <div className="text-6xl md:text-8xl font-headline font-bold text-primary tracking-tighter">
               7+
@@ -165,10 +165,10 @@ export default function AboutPage() {
               <span className="text-primary font-headline font-bold text-xl tracking-tighter">
                 2017 — 2019
               </span>
-              <h3 className="text-3xl font-headline font-bold uppercase mt-2">
+              <h3 className="text-2xl md:text-3xl font-headline font-bold uppercase mt-2">
                 The Digital Impressions
               </h3>
-              <p className="text-on-surface-variant mt-4 text-lg max-w-xl">
+              <p className="text-on-surface-variant mt-4 text-base md:text-lg max-w-xl">
                 This is where I developed my eye for detail. Working with
                 premium fashion and lifestyle brands, my job was to make sure
                 the digital experience felt as high-end as the products
@@ -182,7 +182,7 @@ export default function AboutPage() {
 
       {/* SKILLS & STACK */}
       <section className="bg-background py-5 relative" id="work">
-        <div className="px-12 max-w-[1920px] mx-auto">
+        <div className="px-6 md:px-12 max-w-[1920px] mx-auto">
           <h2 className="text-5xl font-headline tracking-tighter font-bold uppercase z-10 relative pointer-events-none text-center">
             My Tech & Skills Stack
           </h2>
