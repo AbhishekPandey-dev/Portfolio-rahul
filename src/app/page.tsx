@@ -92,7 +92,7 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Card 1 (Large) */}
-          <Link href="https://transformhealthcoalition.org/" className="md:col-span-8 group cursor-pointer block" target="_blank" rel="noopener noreferrer">
+          <Link href="https://transformhealthcoalition.org/" className="md:col-span-8 group cursor-pointer block" target="_blank" rel="noopener noreferrer" data-cursor-no-expand="true">
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <Image alt="Transform Health" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="/assets/transformhealth.png" fill sizes="(max-width: 768px) 100vw, 66vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
@@ -107,7 +107,7 @@ export default function Home() {
           </Link>
 
           {/* Card 2 (Small) */}
-          <Link href="https://www.nappadori.com/" className="md:col-span-4 group cursor-pointer block" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.nappadori.com/" className="md:col-span-4 group cursor-pointer block" target="_blank" rel="noopener noreferrer" data-cursor-no-expand="true">
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <Image alt="Nappa dori Interface background" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="/assets/nappadori.png" fill sizes="(max-width: 768px) 100vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
@@ -122,7 +122,7 @@ export default function Home() {
           </Link>
 
           {/* Card 3 (Wide) */}
-          <Link href="https://www.shivanandnarresh.com/" className="md:col-span-12 group cursor-pointer block" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.shivanandnarresh.com/" className="md:col-span-12 group cursor-pointer block" target="_blank" rel="noopener noreferrer" data-cursor-no-expand="true">
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video autoPlay loop muted className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110">
                 <source src="/assets/shivanandnarresh.webm" type="video/webm" />

@@ -55,12 +55,12 @@ export default function WorkPage() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          {/* Card 1*/}
           <Link
             href="https://transformhealthcoalition.org/"
             className="md:col-span-8 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <Image
@@ -89,12 +89,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 2*/}
           <Link
             href="https://www.nappadori.com/"
             className="md:col-span-4 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <Image
@@ -123,12 +123,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 3 */}
           <Link
             href="https://www.shivanandnarresh.com/"
             className="md:col-span-12 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -158,12 +158,12 @@ export default function WorkPage() {
               </span>
             </div>
           </Link>
-          {/* Card 4*/}
           <Link
             href="https://chashma.com/"
             className="md:col-span-8 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -194,12 +194,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 5*/}
           <Link
             href="https://www.shazandkiks.com/"
             className="md:col-span-4 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -230,12 +230,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 6 */}
           <Link
             href="https://swissbeauty.in/"
             className="md:col-span-12 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -265,12 +265,12 @@ export default function WorkPage() {
               </span>
             </div>
           </Link>
-          {/* Card 7*/}
           <Link
             href="https://www.artisanlab.in/"
             className="md:col-span-8 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <Image
@@ -299,12 +299,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 8 */}
           <Link
             href="https://outhouse-jewellery.com/"
             className="md:col-span-4 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -335,12 +335,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 9 */}
           <Link
             href="https://janandapril.com/"
             className="md:col-span-12 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -370,12 +370,12 @@ export default function WorkPage() {
               </span>
             </div>
           </Link>
-          {/* Card 10*/}
           <Link
             href="https://www.manandesign.com/"
             className="md:col-span-8 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -406,12 +406,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 11*/}
           <Link
             href="https://www.perona.com/"
             className="md:col-span-4 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -442,12 +442,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 12 */}
           <Link
             href="https://www.orangetree.in/"
             className="md:col-span-12 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -477,12 +477,12 @@ export default function WorkPage() {
               </span>
             </div>
           </Link>
-          {/* Card 13*/}
           <Link
             href="https://oncloud9.com/"
             className="md:col-span-8 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -513,12 +513,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 14*/}
           <Link
             href="https://idus.in/"
             className="md:col-span-4 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -549,12 +549,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 15 */}
           <Link
             href="https://www.janavi.com/"
             className="md:col-span-12 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <Image
@@ -582,12 +582,12 @@ export default function WorkPage() {
               </span>
             </div>
           </Link>
-          {/* Card 16*/}
           <Link
             href="https://www.cordstudio.in/"
             className="md:col-span-8 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -618,12 +618,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 17*/}
           <Link
             href="https://www.lilyanncabinets.com/"
             className="md:col-span-4 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <video
@@ -654,12 +654,12 @@ export default function WorkPage() {
             </div>
           </Link>
 
-          {/* Card 18 */}
           <Link
             href="https://www.avacabinetry.com/"
             className="md:col-span-12 group cursor-pointer block"
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-no-expand="true"
           >
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <Image

@@ -76,6 +76,12 @@ body {
   overflow-x: hidden; 
 }
 
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
+
 /* Explicit Stitch Styles */
 .headline-massive { 
   font-family: var(--font-headline); 
