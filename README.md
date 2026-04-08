@@ -135,7 +135,7 @@ npm run start
 ## 📁 Project Structure
 
 ```
-portfolio-rs/
+Portfolio-rahul/
 ├── public/
 │   ├── assets/              # Project showcase media (videos, images)
 │   ├── images/              # Tech stack logos (PNG/WebP)
@@ -273,7 +273,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ## 💬 Contact
 
-**Rahul Sharma** — Full Stack Developer & UI/UX Designer
+**Abhishek Pandey** — Full Stack Developer & UI/UX Designer
 
 - 📧 Email: [hello@rahulsharma.dev](mailto:hello@rahulsharma.dev)
 - 🐙 GitHub: [@AbhishekPandey-dev](https://github.com/AbhishekPandey-dev)
@@ -284,6 +284,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 **⭐ Star this repo if you found it useful!**
 
-Built with precision by **Rahul Sharma**
+Built with precision And Love by **Abhishek Pandey** for My Friend **Rahul Sharma**
 
 </div>
