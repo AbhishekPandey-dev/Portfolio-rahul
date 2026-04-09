@@ -7,10 +7,12 @@ export default function ContactPage() {
           {/* Decorative Accent */}
           <div className="absolute -top-10 -left-10 w-2 h-2 bg-primary"></div>
           <div className="absolute top-20 -right-4 w-20 h-[1px] bg-primary/30"></div>
-          <h1 className="display-text text-[clamp(4rem,15vw,120px)] md:text-[120px] font-bold mb-4 md:-mb-12">LET&apos;S BUILD</h1>
-          <h1 className="display-text text-[clamp(4rem,15vw,120px)] md:text-[120px] font-bold mb-4 md:ml-32 text-outline-white relative z-10 md:-mb-12">SOMETHING</h1>
-          <h1 className="display-text text-[clamp(4rem,15vw,120px)] md:text-[120px] font-bold md:ml-64 text-primary relative z-20">GREAT</h1>
-          <p className="mt-12 text-on-surface-variant max-w-md text-lg md:text-xl font-light">
+          <h1 className="display-text text-[clamp(4rem,15vw,120px)] md:text-[120px] font-bold leading-[0.82]">
+            <span className="block">LET&apos;S BUILD</span>
+            <span className="block md:ml-32 text-outline-white relative z-10">SOMETHING</span>
+            <span className="block md:ml-64 text-primary relative z-20">GREAT</span>
+          </h1>
+          <p className="mt-8 md:mt-10 text-on-surface-variant max-w-md text-lg md:text-xl font-light">
             Ready to bring your project to life? I&apos;d love to hear from you.
           </p>
         </div>
