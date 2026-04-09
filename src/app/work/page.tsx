@@ -1,5 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { ProjectCard, ProjectData } from "@/components/work/ProjectCard";
+import { motion, AnimatePresence } from "framer-motion";
 
 const projects: ProjectData[] = [
   {
@@ -153,7 +157,28 @@ const projects: ProjectData[] = [
   }
 ];
 
+const categories = ["All Projects", "Shopify", "WordPress", "UI/UX Design", "E-Commerce"];
+
 export default function WorkPage() {
+  const [activeFilter, setActiveFilter] = useState("All Projects");
+
+  const filteredProjects = projects.filter((project) => {
+    if (activeFilter === "All Projects") return true;
+    
+    const tagsLower = project.tags.toLowerCase();
+    const filterLower = activeFilter.toLowerCase();
+    
+    if (filterLower === "e-commerce") {
+      return tagsLower.includes("shopify") || tagsLower.includes("magneto");
+    }
+    
+    if (filterLower === "wordpress") {
+      return tagsLower.includes("wordpress");
+    }
+    
+    return tagsLower.includes(filterLower);
+  });
+
   return (
     <>
       {/* Page Header */}
@@ -179,26 +204,24 @@ export default function WorkPage() {
       {/* Filter Bar */}
       <section className="px-8 mb-16 max-w-[1920px] mx-auto">
         <div className="flex flex-wrap gap-x-12 gap-y-6 border-b border-outline-variant/20 pb-4">
-          <button className="text-primary font-headline uppercase tracking-widest text-sm border-b-2 border-primary pb-4 -mb-[18px]">
-            All Projects
-          </button>
-          <button className="text-on-surface-variant hover:text-on-surface transition-colors font-headline uppercase tracking-widest text-sm pb-4">
-            Shopify
-          </button>
-          <button className="text-on-surface-variant hover:text-on-surface transition-colors font-headline uppercase tracking-widest text-sm pb-4">
-            WordPress
-          </button>
-          <button className="text-on-surface-variant hover:text-on-surface transition-colors font-headline uppercase tracking-widest text-sm pb-4">
-            UI/UX Design
-          </button>
-          <button className="text-on-surface-variant hover:text-on-surface transition-colors font-headline uppercase tracking-widest text-sm pb-4">
-            E-Commerce
-          </button>
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveFilter(category)}
+              className={`${
+                activeFilter === category
+                  ? "text-primary border-b-2 border-primary -mb-[18px]"
+                  : "text-on-surface-variant hover:text-on-surface"
+              } transition-colors font-headline uppercase tracking-widest text-sm pb-4 relative`}
+            >
+              {category}
+            </button>
+          ))}
         </div>
       </section>
 
       {/* Featured Work */}
-      <section className="py-20 px-6 md:px-12 bg-surface-container-lowest">
+      <section className="py-20 px-6 md:px-12 bg-surface-container-lowest min-h-screen">
         <div className="flex justify-between items-end mb-10">
           <div>
             <h2 className="font-headline text-5xl md:text-7xl font-bold uppercase tracking-tighter">
@@ -208,11 +231,23 @@ export default function WorkPage() {
         </div>
         
         {/* Render projects with scroll-revealing Project cards */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+                className={project.colSpanClass}
+              >
+                <ProjectCard project={{...project, colSpanClass: "col-span-1 md:col-span-12"}} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </section>
 
       {/* CTA Strip */}
