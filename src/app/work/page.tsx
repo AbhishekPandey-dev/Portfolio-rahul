@@ -12,7 +12,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.transformhealthcoalition.org",
     tags: "Wordpress | UI/UX Design | GSAP | MySQL | Cloudflare",
     categories: ["WordPress", "UI/UX Design"],
-    media: { type: "image", src: "/assets/transformhealth.png" },
+    media: { type: "image", src: "/assets/transformhealth.png", mobileSrc: "/assets/transformhealth.gif" },
     colSpanClass: "md:col-span-8",
     sizes: "(max-width: 768px) 100vw, 66vw"
   },

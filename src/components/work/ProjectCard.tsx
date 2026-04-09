@@ -14,7 +14,7 @@ export type ProjectData = {
   colSpanClass: string;
   sizes?: string;
   media: 
-    | { type: "image"; src: string }
+    | { type: "image"; src: string; mobileSrc?: string }
     | { type: "video"; webm: string; mp4: string };
 };
 
@@ -35,14 +35,26 @@ export function ProjectCard({ project }: { project: ProjectData }) {
       <Link href={project.url} target="_blank" rel="noopener noreferrer" data-cursor-no-expand="true" className="w-full h-full block">
         <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
           {isInView && project.media.type === "image" && (
-            <Image
-              alt={project.title}
-              className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
-              src={project.media.src}
-              fill
-              sizes={project.sizes || "(max-width: 768px) 100vw, 50vw"}
-              quality={90}
-            />
+            <>
+              {project.media.mobileSrc ? (
+                <Image
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 md:hidden"
+                  src={project.media.mobileSrc}
+                  fill
+                  sizes="100vw"
+                  unoptimized
+                />
+              ) : null}
+              <Image
+                alt={project.title}
+                className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-105 md:grayscale md:group-hover:grayscale-0 ${project.media.mobileSrc ? "hidden md:block" : ""}`}
+                src={project.media.src}
+                fill
+                sizes={project.sizes || "(max-width: 768px) 100vw, 50vw"}
+                quality={90}
+              />
+            </>
           )}
           {isInView && project.media.type === "video" && (
             <video
@@ -50,7 +62,7 @@ export function ProjectCard({ project }: { project: ProjectData }) {
               loop
               muted
               playsInline
-              className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+              className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 md:grayscale md:group-hover:grayscale-0"
             >
               <source src={project.media.webm} type="video/webm" />
               <source src={project.media.mp4} type="video/mp4" />
