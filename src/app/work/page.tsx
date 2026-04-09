@@ -1,5 +1,157 @@
 import Link from "next/link";
-import Image from "next/image";
+import { ProjectCard, ProjectData } from "@/components/work/ProjectCard";
+
+const projects: ProjectData[] = [
+  {
+    title: "Transform Health",
+    url: "https://transformhealthcoalition.org/",
+    displayUrl: "www.transformhealthcoalition.org",
+    tags: "Wordpress | UI/UX Design | GSAP | MySQL | Cloudflare",
+    media: { type: "image", src: "/assets/transformhealth.png" },
+    colSpanClass: "md:col-span-8",
+    sizes: "(max-width: 768px) 100vw, 66vw"
+  },
+  {
+    title: "Nappa dori",
+    url: "https://www.nappadori.com/",
+    displayUrl: "www.nappadori.com",
+    tags: "UI/UX Design | Shopify | GSAP | React | Photoswipe",
+    media: { type: "image", src: "/assets/nappadori.png" },
+    colSpanClass: "md:col-span-4",
+    sizes: "(max-width: 768px) 100vw, 33vw"
+  },
+  {
+    title: "Shivan & Narresh",
+    url: "https://www.shivanandnarresh.com/",
+    displayUrl: "www.shivanandnarresh.com",
+    tags: "Shopify | jQuery | AWS | Cloudflare | Klaviyo",
+    media: { type: "video", webm: "/assets/shivanandnarresh.webm", mp4: "/assets/shivanandnarresh.mp4" },
+    colSpanClass: "md:col-span-12"
+  },
+  {
+    title: "Chashma",
+    url: "https://chashma.com/",
+    displayUrl: "www.chashma.com",
+    tags: "Shopify | Firebase | Swiper | jQuery | Font Awesome",
+    media: { type: "video", webm: "/assets/chashma.webm", mp4: "/assets/chashma.mp4" },
+    colSpanClass: "md:col-span-8"
+  },
+  {
+    title: "Shaz & Kiks",
+    url: "https://www.shazandkiks.com/",
+    displayUrl: "www.shazandkiks.com",
+    tags: "UI/UX Design | Shopify | Klaviyo | React | Styled-Components",
+    media: { type: "video", webm: "/assets/shazsiks.webm", mp4: "/assets/shazsiks.mp4" },
+    colSpanClass: "md:col-span-4"
+  },
+  {
+    title: "Swiss Beauty",
+    url: "https://swissbeauty.in/",
+    displayUrl: "www.swissbeauty.in",
+    tags: "Shopify | Tailwind CSS | PhotoSwipe | Keen-Slider | CustomFit",
+    media: { type: "video", webm: "/assets/swissbeauty.webm", mp4: "/assets/swissbeauty.mp4" },
+    colSpanClass: "md:col-span-12"
+  },
+  {
+    title: "Artisan Lab",
+    url: "https://www.artisanlab.in/",
+    displayUrl: "www.artisanlab.in",
+    tags: "Shopify | UI/UX Design | PhotoSwipe | Svelte | Flickity",
+    media: { type: "image", src: "/assets/artisanlab.jpg" },
+    colSpanClass: "md:col-span-8",
+    sizes: "(max-width: 768px) 100vw, 66vw"
+  },
+  {
+    title: "Outhouse Jewellery",
+    url: "https://outhouse-jewellery.com/",
+    displayUrl: "www.outhouse-jewellery.com",
+    tags: "Shopify | BugSnag | React | Google Ads | Preact | Swiper | LayoutHub | Custom CMS",
+    media: { type: "video", webm: "/assets/outhousejewellery.webm", mp4: "/assets/outhousejewellery.mp4" },
+    colSpanClass: "md:col-span-4"
+  },
+  {
+    title: "Jan & April",
+    url: "https://janandapril.com/",
+    displayUrl: "www.janandapril.com",
+    tags: "Shopify | jQuery | AWS | Cloudflare | Klaviyo",
+    media: { type: "video", webm: "/assets/janandapril.webm", mp4: "/assets/janandapril.mp4" },
+    colSpanClass: "md:col-span-12"
+  },
+  {
+    title: "Manan Design",
+    url: "https://www.manandesign.com/",
+    displayUrl: "www.manandesign.com",
+    tags: "Shopify | UI/UX Design | GSAP | PhotoSwipe | Swiper | Custom CMS | AWS | Goolgle Ads | Snap Pixel",
+    media: { type: "video", webm: "/assets/manandesign.webm", mp4: "/assets/manandesign.mp4" },
+    colSpanClass: "md:col-span-8"
+  },
+  {
+    title: "Perona",
+    url: "https://www.perona.com/",
+    displayUrl: "www.perona.com",
+    tags: "Shopify | GSAP | Preact | jQuery UI | Swiper | Google Hosted Libraries | Klaviyo",
+    media: { type: "video", webm: "/assets/perona.webm", mp4: "/assets/perona.mp4" },
+    colSpanClass: "md:col-span-4"
+  },
+  {
+    title: "Orange Tree",
+    url: "https://www.orangetree.in/",
+    displayUrl: "www.orangetree.in",
+    tags: "Shopify | Bootstrap | Vue.js | GSAP | Mansonry | MobX | Avada SEO | Google Ads | Lit-html & Elements",
+    media: { type: "video", webm: "/assets/orangetree.webm", mp4: "/assets/orangetree.mp4" },
+    colSpanClass: "md:col-span-12"
+  },
+  {
+    title: "OnCloud9",
+    url: "https://oncloud9.com/",
+    displayUrl: "www.oncloud9.com",
+    tags: "Shopify | JSS | React | Google Analytics | Sentry | Masonary | Modernizer | PostScript | Lit-html & Elements",
+    media: { type: "video", webm: "/assets/oncloud9.webm", mp4: "/assets/oncloud9.mp4" },
+    colSpanClass: "md:col-span-8"
+  },
+  {
+    title: "Idus",
+    url: "https://idus.in/",
+    displayUrl: "www.idus.in",
+    tags: "Shopify | AWS | Scrollreveal | jQuery | Font Awesome | Loadable-Content",
+    media: { type: "video", webm: "/assets/idus.webm", mp4: "/assets/idus.mp4" },
+    colSpanClass: "md:col-span-4"
+  },
+  {
+    title: "Janavi",
+    url: "https://www.janavi.com/",
+    displayUrl: "www.Janavi.com",
+    tags: "Shopify | BugSnag | Cloudflare | Babel | Custom CMS",
+    media: { type: "image", src: "/assets/janvi.webp" },
+    colSpanClass: "md:col-span-12",
+    sizes: "(max-width: 768px) 100vw, 66vw"
+  },
+  {
+    title: "Cord Studio",
+    url: "https://www.cordstudio.in/",
+    displayUrl: "www.cordstudio.in",
+    tags: "Shopify | Gsap | svelte | preact | photoswipe | Aws | more animated js libraries",
+    media: { type: "video", webm: "/assets/cordstudio.webm", mp4: "/assets/cordstudio.mp4" },
+    colSpanClass: "md:col-span-8"
+  },
+  {
+    title: "Lily Ann Cabinets",
+    url: "https://www.lilyanncabinets.com/",
+    displayUrl: "www.lilyanncabinets.com",
+    tags: "Magneto | Custom Web Development | Mysql | microsoft advertisment | jquary Ui | aws",
+    media: { type: "video", webm: "/assets/lilyanncabinets.webm", mp4: "/assets/lilyanncabinets.mp4" },
+    colSpanClass: "md:col-span-4"
+  },
+  {
+    title: "Ava Cabinetry",
+    url: "https://www.avacabinetry.com/",
+    displayUrl: "www.avacabinetry.com",
+    tags: "Magneto | Custom Web Development | PHP | Bootstrap | mysql | aws",
+    media: { type: "image", src: "/assets/ava.png" },
+    colSpanClass: "md:col-span-12",
+    sizes: "(max-width: 768px) 100vw, 66vw"
+  }
+];
 
 export default function WorkPage() {
   return (
@@ -54,639 +206,12 @@ export default function WorkPage() {
             </h2>
           </div>
         </div>
+        
+        {/* Render projects with scroll-revealing Project cards */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <Link
-            href="https://transformhealthcoalition.org/"
-            className="md:col-span-8 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <Image
-                alt="Transform Health"
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-                src="/assets/transformhealth.png"
-                fill
-                sizes="(max-width: 768px) 100vw, 66vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Wordpress | UI/UX Design | GSAP | MySQL | Cloudflare
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.transformhealthcoalition.org
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Transform Health
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://www.nappadori.com/"
-            className="md:col-span-4 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <Image
-                alt="Nappa dori Interface background"
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-                src="/assets/nappadori.png"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  UI/UX Design | Shopify | GSAP | React | Photoswipe
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.nappadori.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Nappa dori
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://www.shivanandnarresh.com/"
-            className="md:col-span-12 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/shivanandnarresh.webm" type="video/webm" />
-                <source src="/assets/shivanandnarresh.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Shopify | jQuery | AWS | Cloudflare | Klaviyo
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.shivanandnarresh.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Shivan & Narresh
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-          <Link
-            href="https://chashma.com/"
-            className="md:col-span-8 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/chashma.webm" type="video/webm" />
-                <source src="/assets/chashma.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Shopify | Firebase | Swiper | jQuery | Font Awesome
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.chashma.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Chashma
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://www.shazandkiks.com/"
-            className="md:col-span-4 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/shazsiks.webm" type="video/webm" />
-                <source src="/assets/shazsiks.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  UI/UX Design | Shopify | Klaviyo | React | Styled-Components
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.shazandkiks.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Shaz & Kiks
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://swissbeauty.in/"
-            className="md:col-span-12 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/swissbeauty.webm" type="video/webm" />
-                <source src="/assets/swissbeauty.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Shopify | Tailwind CSS | PhotoSwipe | Keen-Slider | CustomFit
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.swissbeauty.in
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Swiss Beauty
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-          <Link
-            href="https://www.artisanlab.in/"
-            className="md:col-span-8 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <Image
-                alt="Artisan Lab"
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-                src="/assets/artisanlab.jpg"
-                fill
-                sizes="(max-width: 768px) 100vw, 66vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Shopify | UI/UX Design | PhotoSwipe | Svelte | Flickity
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.artisanlab.in
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Artisan Lab
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://outhouse-jewellery.com/"
-            className="md:col-span-4 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/outhousejewellery.webm" type="video/webm" />
-                <source src="/assets/outhousejewellery.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                   Shopify | BugSnag | React | Google Ads | Preact | Swiper | LayoutHub | Custom CMS
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.outhouse-jewellery.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Outhouse Jewellery
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://janandapril.com/"
-            className="md:col-span-12 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/janandapril.webm" type="video/webm" />
-                <source src="/assets/janandapril.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Shopify | jQuery | AWS | Cloudflare | Klaviyo
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.janandapril.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Jan & April
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-          <Link
-            href="https://www.manandesign.com/"
-            className="md:col-span-8 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/manandesign.webm" type="video/webm" />
-                <source src="/assets/manandesign.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Shopify | UI/UX Design | GSAP | PhotoSwipe | Swiper | Custom CMS | AWS | Goolgle Ads | Snap Pixel
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.manandesign.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Manan Design
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://www.perona.com/"
-            className="md:col-span-4 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/perona.webm" type="video/webm" />
-                <source src="/assets/perona.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                   Shopify | GSAP | Preact | jQuery UI | Swiper | Google Hosted Libraries | Klaviyo
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.perona.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Perona
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://www.orangetree.in/"
-            className="md:col-span-12 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/orangetree.webm" type="video/webm" />
-                <source src="/assets/orangetree.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Shopify | Bootstrap | Vue.js | GSAP | Mansonry | MobX | Avada SEO | Google Ads | Lit-html & Elements
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.orangetree.in
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Orange Tree
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-          <Link
-            href="https://oncloud9.com/"
-            className="md:col-span-8 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/oncloud9.webm" type="video/webm" />
-                <source src="/assets/oncloud9.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Shopify | JSS | React | Google Analytics | Sentry | Masonary | Modernizer | PostScript | Lit-html & Elements
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.oncloud9.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                OnCloud9
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://idus.in/"
-            className="md:col-span-4 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/idus.webm" type="video/webm" />
-                <source src="/assets/idus.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                   Shopify | AWS | Scrollreveal | jQuery | Font Awesome | Loadable-Content
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.idus.in
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Idus
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://www.janavi.com/"
-            className="md:col-span-12 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <Image
-                alt="Janavi"
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-                src="/assets/janvi.webp"
-                fill
-                sizes="(max-width: 768px) 100vw, 66vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Shopify | BugSnag | Cloudflare | Babel | Custom CMS
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.Janavi.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Janavi
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-          <Link
-            href="https://www.cordstudio.in/"
-            className="md:col-span-8 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/cordstudio.webm" type="video/webm" />
-                <source src="/assets/cordstudio.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Shopify | Gsap | svelte | preact | photoswipe | Aws | more animated js libraries 
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.cordstudio.in
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Cord Studio
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://www.lilyanncabinets.com/"
-            className="md:col-span-4 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video
-                autoPlay
-                loop
-                muted
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-              >
-                <source src="/assets/lilyanncabinets.webm" type="video/webm" />
-                <source src="/assets/lilyanncabinets.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                   Magneto | Custom Web Development | Mysql | microsoft advertisment | jquary Ui | aws 
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.lilyanncabinets.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Lily Ann Cabinets
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="https://www.avacabinetry.com/"
-            className="md:col-span-12 group cursor-pointer block"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cursor-no-expand="true"
-          >
-            <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <Image
-                alt="Ava Cabinetry"
-                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
-                src="/assets/ava.png"
-                fill
-                sizes="(max-width: 768px) 100vw, 66vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">
-                  Magneto | Custom Web Development | PHP | Bootstrap | mysql | aws 
-                </span>
-                <h3 className="font-headline text-4xl font-bold text-white uppercase">
-                  www.avacabinetry.com
-                </h3>
-              </div>
-            </div>
-            <div className="flex justify-between items-center px-1">
-              <h4 className="font-headline text-2xl font-bold uppercase">
-                Ava Cabinetry
-              </h4>
-              <span className="material-symbols-outlined text-primary">
-                arrow_outward
-              </span>
-            </div>
-          </Link>
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
         </div>
       </section>
 
