@@ -11,6 +11,7 @@ const projects: ProjectData[] = [
     url: "https://transformhealthcoalition.org/",
     displayUrl: "www.transformhealthcoalition.org",
     tags: "Wordpress | UI/UX Design | GSAP | MySQL | Cloudflare",
+    categories: ["WordPress", "UI/UX Design"],
     media: { type: "image", src: "/assets/transformhealth.png" },
     colSpanClass: "md:col-span-8",
     sizes: "(max-width: 768px) 100vw, 66vw"
@@ -20,6 +21,7 @@ const projects: ProjectData[] = [
     url: "https://www.nappadori.com/",
     displayUrl: "www.nappadori.com",
     tags: "UI/UX Design | Shopify | GSAP | React | Photoswipe",
+    categories: ["Shopify", "UI/UX Design", "E-Commerce"],
     media: { type: "image", src: "/assets/nappadori.png" },
     colSpanClass: "md:col-span-4",
     sizes: "(max-width: 768px) 100vw, 33vw"
@@ -29,6 +31,7 @@ const projects: ProjectData[] = [
     url: "https://www.shivanandnarresh.com/",
     displayUrl: "www.shivanandnarresh.com",
     tags: "Shopify | jQuery | AWS | Cloudflare | Klaviyo",
+    categories: ["Shopify", "E-Commerce"],
     media: { type: "video", webm: "/assets/shivanandnarresh.webm", mp4: "/assets/shivanandnarresh.mp4" },
     colSpanClass: "md:col-span-12"
   },
@@ -37,6 +40,7 @@ const projects: ProjectData[] = [
     url: "https://chashma.com/",
     displayUrl: "www.chashma.com",
     tags: "Shopify | Firebase | Swiper | jQuery | Font Awesome",
+    categories: ["Shopify", "E-Commerce"],
     media: { type: "video", webm: "/assets/chashma.webm", mp4: "/assets/chashma.mp4" },
     colSpanClass: "md:col-span-8"
   },
@@ -45,6 +49,7 @@ const projects: ProjectData[] = [
     url: "https://www.shazandkiks.com/",
     displayUrl: "www.shazandkiks.com",
     tags: "UI/UX Design | Shopify | Klaviyo | React | Styled-Components",
+    categories: ["Shopify", "UI/UX Design", "E-Commerce"],
     media: { type: "video", webm: "/assets/shazsiks.webm", mp4: "/assets/shazsiks.mp4" },
     colSpanClass: "md:col-span-4"
   },
@@ -53,6 +58,7 @@ const projects: ProjectData[] = [
     url: "https://swissbeauty.in/",
     displayUrl: "www.swissbeauty.in",
     tags: "Shopify | Tailwind CSS | PhotoSwipe | Keen-Slider | CustomFit",
+    categories: ["Shopify", "E-Commerce"],
     media: { type: "video", webm: "/assets/swissbeauty.webm", mp4: "/assets/swissbeauty.mp4" },
     colSpanClass: "md:col-span-12"
   },
@@ -61,6 +67,7 @@ const projects: ProjectData[] = [
     url: "https://www.artisanlab.in/",
     displayUrl: "www.artisanlab.in",
     tags: "Shopify | UI/UX Design | PhotoSwipe | Svelte | Flickity",
+    categories: ["Shopify", "UI/UX Design", "E-Commerce"],
     media: { type: "image", src: "/assets/artisanlab.jpg" },
     colSpanClass: "md:col-span-8",
     sizes: "(max-width: 768px) 100vw, 66vw"
@@ -70,6 +77,7 @@ const projects: ProjectData[] = [
     url: "https://outhouse-jewellery.com/",
     displayUrl: "www.outhouse-jewellery.com",
     tags: "Shopify | BugSnag | React | Google Ads | Preact | Swiper | LayoutHub | Custom CMS",
+    categories: ["Shopify", "E-Commerce"],
     media: { type: "video", webm: "/assets/outhousejewellery.webm", mp4: "/assets/outhousejewellery.mp4" },
     colSpanClass: "md:col-span-4"
   },
@@ -78,6 +86,7 @@ const projects: ProjectData[] = [
     url: "https://janandapril.com/",
     displayUrl: "www.janandapril.com",
     tags: "Shopify | jQuery | AWS | Cloudflare | Klaviyo",
+    categories: ["Shopify", "E-Commerce"],
     media: { type: "video", webm: "/assets/janandapril.webm", mp4: "/assets/janandapril.mp4" },
     colSpanClass: "md:col-span-12"
   },
@@ -86,6 +95,7 @@ const projects: ProjectData[] = [
     url: "https://www.manandesign.com/",
     displayUrl: "www.manandesign.com",
     tags: "Shopify | UI/UX Design | GSAP | PhotoSwipe | Swiper | Custom CMS | AWS | Goolgle Ads | Snap Pixel",
+    categories: ["Shopify", "UI/UX Design", "E-Commerce"],
     media: { type: "video", webm: "/assets/manandesign.webm", mp4: "/assets/manandesign.mp4" },
     colSpanClass: "md:col-span-8"
   },
@@ -94,6 +104,7 @@ const projects: ProjectData[] = [
     url: "https://www.perona.com/",
     displayUrl: "www.perona.com",
     tags: "Shopify | GSAP | Preact | jQuery UI | Swiper | Google Hosted Libraries | Klaviyo",
+    categories: ["Shopify", "E-Commerce"],
     media: { type: "video", webm: "/assets/perona.webm", mp4: "/assets/perona.mp4" },
     colSpanClass: "md:col-span-4"
   },
@@ -102,6 +113,7 @@ const projects: ProjectData[] = [
     url: "https://www.orangetree.in/",
     displayUrl: "www.orangetree.in",
     tags: "Shopify | Bootstrap | Vue.js | GSAP | Mansonry | MobX | Avada SEO | Google Ads | Lit-html & Elements",
+    categories: ["Shopify", "E-Commerce"],
     media: { type: "video", webm: "/assets/orangetree.webm", mp4: "/assets/orangetree.mp4" },
     colSpanClass: "md:col-span-12"
   },
@@ -110,6 +122,7 @@ const projects: ProjectData[] = [
     url: "https://oncloud9.com/",
     displayUrl: "www.oncloud9.com",
     tags: "Shopify | JSS | React | Google Analytics | Sentry | Masonary | Modernizer | PostScript | Lit-html & Elements",
+    categories: ["Shopify", "E-Commerce"],
     media: { type: "video", webm: "/assets/oncloud9.webm", mp4: "/assets/oncloud9.mp4" },
     colSpanClass: "md:col-span-8"
   },
@@ -118,6 +131,7 @@ const projects: ProjectData[] = [
     url: "https://idus.in/",
     displayUrl: "www.idus.in",
     tags: "Shopify | AWS | Scrollreveal | jQuery | Font Awesome | Loadable-Content",
+    categories: ["Shopify", "E-Commerce"],
     media: { type: "video", webm: "/assets/idus.webm", mp4: "/assets/idus.mp4" },
     colSpanClass: "md:col-span-4"
   },
@@ -126,6 +140,7 @@ const projects: ProjectData[] = [
     url: "https://www.janavi.com/",
     displayUrl: "www.Janavi.com",
     tags: "Shopify | BugSnag | Cloudflare | Babel | Custom CMS",
+    categories: ["Shopify", "E-Commerce"],
     media: { type: "image", src: "/assets/janvi.webp" },
     colSpanClass: "md:col-span-12",
     sizes: "(max-width: 768px) 100vw, 66vw"
@@ -135,6 +150,7 @@ const projects: ProjectData[] = [
     url: "https://www.cordstudio.in/",
     displayUrl: "www.cordstudio.in",
     tags: "Shopify | Gsap | svelte | preact | photoswipe | Aws | more animated js libraries",
+    categories: ["Shopify", "E-Commerce"],
     media: { type: "video", webm: "/assets/cordstudio.webm", mp4: "/assets/cordstudio.mp4" },
     colSpanClass: "md:col-span-8"
   },
@@ -143,6 +159,7 @@ const projects: ProjectData[] = [
     url: "https://www.lilyanncabinets.com/",
     displayUrl: "www.lilyanncabinets.com",
     tags: "Magneto | Custom Web Development | Mysql | microsoft advertisment | jquary Ui | aws",
+    categories: ["E-Commerce"],
     media: { type: "video", webm: "/assets/lilyanncabinets.webm", mp4: "/assets/lilyanncabinets.mp4" },
     colSpanClass: "md:col-span-4"
   },
@@ -151,6 +168,7 @@ const projects: ProjectData[] = [
     url: "https://www.avacabinetry.com/",
     displayUrl: "www.avacabinetry.com",
     tags: "Magneto | Custom Web Development | PHP | Bootstrap | mysql | aws",
+    categories: ["E-Commerce"],
     media: { type: "image", src: "/assets/ava.png" },
     colSpanClass: "md:col-span-12",
     sizes: "(max-width: 768px) 100vw, 66vw"
@@ -165,18 +183,8 @@ export default function WorkPage() {
   const filteredProjects = projects.filter((project) => {
     if (activeFilter === "All Projects") return true;
     
-    const tagsLower = project.tags.toLowerCase();
-    const filterLower = activeFilter.toLowerCase();
-    
-    if (filterLower === "e-commerce") {
-      return tagsLower.includes("shopify") || tagsLower.includes("magneto");
-    }
-    
-    if (filterLower === "wordpress") {
-      return tagsLower.includes("wordpress");
-    }
-    
-    return tagsLower.includes(filterLower);
+    // Check if the current project's categories array includes the selected filter
+    return project.categories && project.categories.includes(activeFilter);
   });
 
   return (

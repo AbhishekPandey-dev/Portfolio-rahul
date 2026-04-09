@@ -10,6 +10,7 @@ export type ProjectData = {
   url: string;
   displayUrl: string;
   tags: string;
+  categories: string[];
   colSpanClass: string;
   sizes?: string;
   media: 
