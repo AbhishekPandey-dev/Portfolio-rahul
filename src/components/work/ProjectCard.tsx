@@ -81,14 +81,14 @@ export function ProjectCard({ project }: { project: ProjectData }) {
             </>
           )}
           
-          {/* Overlay gradient - only appears on hover with smooth fade */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10 z-10">
-            {/* Tags slide up slightly */}
-            <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2 transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
+          {/* Overlay gradient - visible on mobile, hover on desktop */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 md:p-10 z-10">
+            {/* Tags - visible on mobile, slide up on desktop hover */}
+            <span className="text-primary font-bold uppercase tracking-widest text-xs md:text-sm mb-2 transform transition-all duration-500 delay-100 opacity-100 md:opacity-0 translate-y-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0">
               {project.tags}
             </span>
-            {/* Title slides up after tags */}
-            <h3 className="font-headline text-2xl md:text-4xl font-bold text-white uppercase transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-150">
+            {/* Title - visible on mobile, slide up on desktop hover */}
+            <h3 className="font-headline text-xl md:text-4xl font-bold text-white uppercase transform transition-all duration-500 delay-150 opacity-100 md:opacity-0 translate-y-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 break-all">
               {project.displayUrl}
             </h3>
           </div>
