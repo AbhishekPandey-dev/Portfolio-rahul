@@ -12,7 +12,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.transformhealthcoalition.org",
     tags: "Wordpress | UI/UX Design | GSAP | MySQL | Cloudflare",
     categories: ["WordPress", "UI/UX Design"],
-    media: { type: "image", src: "/assets/transformhealth.png", mobileSrc: "/assets/transformhealth.gif" },
+    media: { type: "image", src: "/assets/transformhealth.png", mobileSrc: "/assets/img-mobile/transformhealth.png" },
     colSpanClass: "md:col-span-8",
     sizes: "(max-width: 768px) 100vw, 66vw"
   },
@@ -22,7 +22,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.nappadori.com",
     tags: "UI/UX Design | Shopify | GSAP | React | Photoswipe",
     categories: ["Shopify", "UI/UX Design", "E-Commerce"],
-    media: { type: "image", src: "/assets/nappadori.png" },
+    media: { type: "image", src: "/assets/nappadori.png", mobileSrc: "/assets/img-mobile/nappadori.png" },
     colSpanClass: "md:col-span-4",
     sizes: "(max-width: 768px) 100vw, 33vw"
   },
@@ -32,7 +32,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.shivanandnarresh.com",
     tags: "Shopify | jQuery | AWS | Cloudflare | Klaviyo",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"],
-    media: { type: "video", webm: "/assets/shivanandnarresh.webm", mp4: "/assets/shivanandnarresh.mp4" },
+    media: { type: "video", webm: "/assets/shivanandnarresh.webm", mp4: "/assets/shivanandnarresh.mp4", },
     colSpanClass: "md:col-span-12"
   },
   {
