@@ -1,12 +1,17 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import SplineScene from "@/components/SplineScene";
 import { useSounds } from "@/hooks/use-sounds";
+
+const DesktopSplineScene = dynamic(() => import("@/components/SplineScene"), {
+  ssr: false,
+});
 
 export default function Home() {
   const { playPressSound, playReleaseSound } = useSounds();
+  const [showDesktopSpline, setShowDesktopSpline] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -28,6 +33,20 @@ export default function Home() {
     };
   }, [playPressSound, playReleaseSound]);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const updateSplineVisibility = (event?: MediaQueryListEvent) => {
+      setShowDesktopSpline(event ? event.matches : mediaQuery.matches);
+    };
+
+    updateSplineVisibility();
+    mediaQuery.addEventListener("change", updateSplineVisibility);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateSplineVisibility);
+    };
+  }, []);
+
   return (
     <div className="bg-surface-dim selection:bg-primary selection:text-on-primary">
       {/* Hero Section */}
@@ -39,11 +58,13 @@ export default function Home() {
         </div>
         
         {/* Spline 3D Scene Container */}
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-full h-[50vh] md:w-[800px] md:h-[800px] lg:w-[1000px] lg:h-[1000px] z-10 pointer-events-none md:block md:translate-x-[12%] opacity-40 md:opacity-100 mt-20 md:mt-0">
-          <div className="w-full h-full pointer-events-auto transform scale-[0.8] md:scale-[1.2] lg:scale-[1.2] md:translate-x-12 md:-translate-y-4">
-            <SplineScene />
+        {showDesktopSpline ? (
+          <div className="absolute top-1/2 right-0 hidden h-[50vh] w-full -translate-y-1/2 md:block md:h-[800px] md:w-[800px] md:translate-x-[12%] lg:h-[1000px] lg:w-[1000px] z-10 pointer-events-none opacity-40 md:opacity-100 mt-20 md:mt-0">
+            <div className="w-full h-full pointer-events-auto transform scale-[0.8] md:scale-[1.2] lg:scale-[1.2] md:translate-x-12 md:-translate-y-4">
+              <DesktopSplineScene />
+            </div>
           </div>
-        </div>
+        ) : null}
 
         <div className="relative z-20 w-full max-w-7xl pointer-events-none pt-24 md:pt-0">
           <h1 className="headline-massive text-[clamp(4.5rem,15vw,80px)] md:text-[180px] lg:text-[220px] font-bold text-white uppercase flex flex-col mb-4">
@@ -94,7 +115,7 @@ export default function Home() {
           {/* Card 1 (Large) */}
           <Link href="https://transformhealthcoalition.org/" className="md:col-span-8 group cursor-pointer block" target="_blank" rel="noopener noreferrer" data-cursor-no-expand="true">
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <Image alt="Transform Health" className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:hidden" src="/assets/transformhealth.gif" fill sizes="100vw" unoptimized />
+              <Image alt="Transform Health" className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:hidden" src="/assets/img-mobile/transformhealth.png" fill sizes="100vw" unoptimized />
               <Image alt="Transform Health" className="hidden w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:block md:grayscale md:group-hover:grayscale-0" src="/assets/transformhealth.png" fill sizes="(max-width: 768px) 100vw, 66vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
                 <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Wordpress | UI/UX Design | GSAP | MySQL | Cloudflare</span>
@@ -110,7 +131,9 @@ export default function Home() {
           {/* Card 2 (Small) */}
           <Link href="https://www.nappadori.com/" className="md:col-span-4 group cursor-pointer block" target="_blank" rel="noopener noreferrer" data-cursor-no-expand="true">
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <Image alt="Nappa dori Interface background" className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0" src="/assets/nappadori.png" fill sizes="(max-width: 768px) 100vw, 33vw" />
+
+              <Image alt="Nappa dori" className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:hidden" src="/assets/img-mobile/nappadori.png" fill sizes="100vw" unoptimized />
+              <Image alt="Nappa dori" className="hidden w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:block md:grayscale md:group-hover:grayscale-0" src="/assets/nappadori.png" fill sizes="(max-width: 768px) 100vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
                 <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">UI/UX Design | Shopify | GSAP | React | Photoswipe</span>
                 <h3 className="font-headline text-4xl font-bold text-white uppercase">www.nappadori.com</h3>
@@ -125,7 +148,8 @@ export default function Home() {
           {/* Card 3 (Wide) */}
           <Link href="https://www.shivanandnarresh.com/" className="md:col-span-12 group cursor-pointer block" target="_blank" rel="noopener noreferrer" data-cursor-no-expand="true">
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
-              <video autoPlay loop muted className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0">
+              <Image alt="Shivan & Narresh showcase" className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:hidden" src="/assets/img-mobile/shivanandnarresh.png" fill sizes="100vw" unoptimized />
+              <video autoPlay loop muted className="hidden w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:block md:grayscale md:group-hover:grayscale-0">
                 <source src="/assets/shivanandnarresh.webm" type="video/webm" />
                 <source src="/assets/shivanandnarresh.mp4" type="video/mp4" />
               </video>
