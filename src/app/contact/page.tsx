@@ -1,3 +1,5 @@
+import ContactForm from "@/components/ContactForm";
+
 export default function ContactPage() {
   return (
     <>
@@ -50,37 +52,7 @@ export default function ContactPage() {
             </div>
           </div>
           {/* Right Column (Form) */}
-          <div className="w-full md:w-[55%] bg-surface-container-low p-8 md:p-12">
-            <form action="#" className="space-y-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div className="relative">
-                  <label className="text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Your Name</label>
-                  <input className="underline-input font-body" placeholder="John Doe" type="text" />
-                </div>
-                <div className="relative">
-                  <label className="text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Your Email</label>
-                  <input className="underline-input font-body" placeholder="john@example.com" type="email" suppressHydrationWarning={true} />
-                </div>
-              </div>
-              <div className="relative">
-                <label className="text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Project Type</label>
-                <select className="underline-input font-body" defaultValue="Select a service">
-                  <option disabled>Select a service</option>
-                  <option>Shopify Development</option>
-                  <option>WordPress Development</option>
-                  <option>Custom Web App</option>
-                  <option>UI/UX Design</option>
-                </select>
-              </div>
-              <div className="relative">
-                <label className="text-[10px] uppercase tracking-widest text-on-surface-variant block mb-1">Tell me about your project</label>
-                <textarea className="underline-input font-body resize-none" placeholder="Briefly describe your goals and timeline..." rows={4}></textarea>
-              </div>
-              <button className="w-full bg-primary text-on-primary font-headline font-bold uppercase tracking-widest py-5 hover:bg-primary-fixed transition-all hover:scale-[1.01] active:scale-[0.99]" type="submit">
-                Send Message
-              </button>
-            </form>
-          </div>
+          <ContactForm />
         </div>
       </section>
 
