@@ -32,7 +32,12 @@ const projects: ProjectData[] = [
     displayUrl: "www.shivanandnarresh.com",
     tags: "Shopify | jQuery | AWS | Cloudflare | Klaviyo",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"],
-    media: { type: "video", webm: "/assets/shivanandnarresh.webm", mp4: "/assets/shivanandnarresh.mp4", },
+    media: {
+      type: "video",
+      webm: "/assets/shivanandnarresh.webm",
+      mp4: "/assets/shivanandnarresh.mp4",
+      mobileSrc: "/assets/img-mobile/shivanandnarresh.png"
+    },
     colSpanClass: "md:col-span-12"
   },
   {
@@ -241,7 +246,7 @@ export default function WorkPage() {
         {/* Render projects with scroll-revealing Project cards */}
         <motion.div layout className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, index) => (
+            {filteredProjects.map((project) => (
               <motion.div
                 key={project.title}
                 layout

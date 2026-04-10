@@ -15,7 +15,7 @@ export type ProjectData = {
   sizes?: string;
   media: 
     | { type: "image"; src: string; mobileSrc?: string }
-    | { type: "video"; webm: string; mp4: string };
+    | { type: "video"; webm: string; mp4: string; mobileSrc?: string };
 };
 
 export function ProjectCard({ project }: { project: ProjectData }) {
@@ -57,16 +57,28 @@ export function ProjectCard({ project }: { project: ProjectData }) {
             </>
           )}
           {isInView && project.media.type === "video" && (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 md:grayscale md:group-hover:grayscale-0"
-            >
-              <source src={project.media.webm} type="video/webm" />
-              <source src={project.media.mp4} type="video/mp4" />
-            </video>
+            <>
+              {project.media.mobileSrc ? (
+                <Image
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 md:hidden"
+                  src={project.media.mobileSrc}
+                  fill
+                  sizes="100vw"
+                  unoptimized
+                />
+              ) : null}
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-105 md:grayscale md:group-hover:grayscale-0 ${project.media.mobileSrc ? "hidden md:block" : ""}`}
+              >
+                <source src={project.media.webm} type="video/webm" />
+                <source src={project.media.mp4} type="video/mp4" />
+              </video>
+            </>
           )}
           
           {/* Overlay gradient - only appears on hover with smooth fade */}
