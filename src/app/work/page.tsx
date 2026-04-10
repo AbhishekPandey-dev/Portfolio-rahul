@@ -46,7 +46,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.chashma.com",
     tags: "Shopify | Firebase | Swiper | jQuery | Font Awesome",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"],
-    media: { type: "video", webm: "/assets/chashma.webm", mp4: "/assets/chashma.mp4" },
+    media: { type: "video", webm: "/assets/chashma.webm", mp4: "/assets/chashma.mp4", mobileSrc: "/assets/img-mobile/chashma.png" },
     colSpanClass: "md:col-span-8"
   },
   {
@@ -55,7 +55,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.shazandkiks.com",
     tags: "UI/UX Design | Shopify | Klaviyo | React | Styled-Components",
     categories: ["Shopify", "UI/UX Design", "E-Commerce"],
-    media: { type: "video", webm: "/assets/shazsiks.webm", mp4: "/assets/shazsiks.mp4" },
+    media: { type: "video", webm: "/assets/shazsiks.webm", mp4: "/assets/shazsiks.mp4", mobileSrc: "/assets/img-mobile/shazkiks.png" },
     colSpanClass: "md:col-span-4"
   },
   {
@@ -64,7 +64,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.swissbeauty.in",
     tags: "Shopify | Tailwind CSS | PhotoSwipe | Keen-Slider | CustomFit",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"],
-    media: { type: "video", webm: "/assets/swissbeauty.webm", mp4: "/assets/swissbeauty.mp4" },
+    media: { type: "video", webm: "/assets/swissbeauty.webm", mp4: "/assets/swissbeauty.mp4", mobileSrc: "/assets/img-mobile/swissbeauty.png" },
     colSpanClass: "md:col-span-12"
   },
   {
@@ -73,7 +73,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.artisanlab.in",
     tags: "Shopify | UI/UX Design | PhotoSwipe | Svelte | Flickity",
     categories: ["Shopify", "UI/UX Design", "E-Commerce"],
-    media: { type: "image", src: "/assets/artisanlab.jpg" },
+    media: { type: "image", src: "/assets/artisanlab.jpg", mobileSrc: "/assets/img-mobile/artisanlab.png" },
     colSpanClass: "md:col-span-8",
     sizes: "(max-width: 768px) 100vw, 66vw"
   },
@@ -83,7 +83,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.outhouse-jewellery.com",
     tags: "Shopify | BugSnag | React | Google Ads | Preact | Swiper | LayoutHub | Custom CMS",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"],
-    media: { type: "video", webm: "/assets/outhousejewellery.webm", mp4: "/assets/outhousejewellery.mp4" },
+    media: { type: "video", webm: "/assets/outhousejewellery.webm", mp4: "/assets/outhousejewellery.mp4", mobileSrc: "/assets/img-mobile/outhouse.png" },
     colSpanClass: "md:col-span-4"
   },
   {
@@ -92,7 +92,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.janandapril.com",
     tags: "Shopify | jQuery | AWS | Cloudflare | Klaviyo",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"],
-    media: { type: "video", webm: "/assets/janandapril.webm", mp4: "/assets/janandapril.mp4" },
+    media: { type: "video", webm: "/assets/janandapril.webm", mp4: "/assets/janandapril.mp4", mobileSrc: "/assets/img-mobile/janandapril.png" },
     colSpanClass: "md:col-span-12"
   },
   {
@@ -101,7 +101,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.manandesign.com",
     tags: "Shopify | UI/UX Design | GSAP | PhotoSwipe | Swiper | Custom CMS | AWS | Goolgle Ads | Snap Pixel",
     categories: ["Shopify", "UI/UX Design", "E-Commerce"],
-    media: { type: "video", webm: "/assets/manandesign.webm", mp4: "/assets/manandesign.mp4" },
+    media: { type: "video", webm: "/assets/manandesign.webm", mp4: "/assets/manandesign.mp4", mobileSrc: "/assets/img-mobile/manan.png" },
     colSpanClass: "md:col-span-8"
   },
   {
@@ -110,7 +110,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.perona.com",
     tags: "Shopify | GSAP | Preact | jQuery UI | Swiper | Google Hosted Libraries | Klaviyo",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"],
-    media: { type: "video", webm: "/assets/perona.webm", mp4: "/assets/perona.mp4" },
+    media: { type: "video", webm: "/assets/perona.webm", mp4: "/assets/perona.mp4", mobileSrc: "/assets/img-mobile/perona.png" },
     colSpanClass: "md:col-span-4"
   },
   {
@@ -119,7 +119,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.orangetree.in",
     tags: "Shopify | Bootstrap | Vue.js | GSAP | Mansonry | MobX | Avada SEO | Google Ads | Lit-html & Elements",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"],
-    media: { type: "video", webm: "/assets/orangetree.webm", mp4: "/assets/orangetree.mp4" },
+    media: { type: "video", webm: "/assets/orangetree.webm", mp4: "/assets/orangetree.mp4", mobileSrc: "/assets/img-mobile/orangetree.png" },
     colSpanClass: "md:col-span-12"
   },
   {
@@ -128,7 +128,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.oncloud9.com",
     tags: "Shopify | JSS | React | Google Analytics | Sentry | Masonary | Modernizer | PostScript | Lit-html & Elements",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"  ],
-    media: { type: "video", webm: "/assets/oncloud9.webm", mp4: "/assets/oncloud9.mp4" },
+    media: { type: "video", webm: "/assets/oncloud9.webm", mp4: "/assets/oncloud9.mp4", mobileSrc: "/assets/img-mobile/cloud9.png" },
     colSpanClass: "md:col-span-8"
   },
   {
@@ -137,7 +137,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.idus.in",
     tags: "Shopify | AWS | Scrollreveal | jQuery | Font Awesome | Loadable-Content",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"],
-    media: { type: "video", webm: "/assets/idus.webm", mp4: "/assets/idus.mp4" },
+    media: { type: "video", webm: "/assets/idus.webm", mp4: "/assets/idus.mp4", mobileSrc: "/assets/img-mobile/idus.png" },
     colSpanClass: "md:col-span-4"
   },
   {
@@ -146,7 +146,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.Janavi.com",
     tags: "Shopify | BugSnag | Cloudflare | Babel | Custom CMS",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"],
-    media: { type: "image", src: "/assets/janvi.webp" },
+    media: { type: "image", src: "/assets/janvi.webp", mobileSrc: "/assets/img-mobile/janavi.png" },
     colSpanClass: "md:col-span-12",
     sizes: "(max-width: 768px) 100vw, 66vw"
   },
@@ -156,7 +156,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.cordstudio.in",
     tags: "Shopify | Gsap | svelte | preact | photoswipe | Aws | more animated js libraries",
     categories: ["Shopify", "E-Commerce", "UI/UX Design"],
-    media: { type: "video", webm: "/assets/cordstudio.webm", mp4: "/assets/cordstudio.mp4" },
+    media: { type: "video", webm: "/assets/cordstudio.webm", mp4: "/assets/cordstudio.mp4", mobileSrc: "/assets/img-mobile/cordstudio.png" },
     colSpanClass: "md:col-span-8"
   },
   {
@@ -165,7 +165,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.lilyanncabinets.com",
     tags: "Magneto | Custom Web Development | Mysql | microsoft advertisment | jquary Ui | aws",
     categories: ["E-Commerce", "UI/UX Design"],
-    media: { type: "video", webm: "/assets/lilyanncabinets.webm", mp4: "/assets/lilyanncabinets.mp4" },
+    media: { type: "video", webm: "/assets/lilyanncabinets.webm", mp4: "/assets/lilyanncabinets.mp4", mobileSrc: "/assets/img-mobile/lilyanncabinets.png" },
     colSpanClass: "md:col-span-4"
   },
   {
@@ -174,7 +174,7 @@ const projects: ProjectData[] = [
     displayUrl: "www.avacabinetry.com",
     tags: "Magneto | Custom Web Development | PHP | Bootstrap | mysql | aws",
     categories: ["E-Commerce"],
-    media: { type: "image", src: "/assets/ava.png" },
+    media: { type: "image", src: "/assets/ava.png", mobileSrc: "/assets/img-mobile/avacabinetry.png" },
     colSpanClass: "md:col-span-12",
     sizes: "(max-width: 768px) 100vw, 66vw"
   }
