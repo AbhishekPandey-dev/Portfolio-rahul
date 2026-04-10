@@ -193,54 +193,113 @@ export default function WorkPage() {
   });
 
   return (
-    <>
-      {/* Page Header */}
-      <header className="px-8 mb-24 max-w-[1920px] mx-auto pt-48">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+    <div className="relative isolate min-h-screen bg-surface selection:bg-primary selection:text-on-primary">
+      {/* Premium Texture Overlay - Grain effect for depth */}
+      <div className="fixed inset-0 pointer-events-none z-[100] opacity-[0.03] mix-blend-overlay" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}></div>
+
+      {/* Page Header - Staggered Entrance */}
+      <header className="px-8 mb-24 max-w-[1920px] mx-auto pt-48 relative z-10">
+        <motion.div 
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.15, delayChildren: 0.2 }
+            }
+          }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-8"
+        >
           <div className="relative">
-            <h1 className="font-headline font-bold text-[clamp(4rem,15vw,100px)] md:text-[180px] leading-[0.9] tracking-tighter uppercase">
+            <motion.h1 
+              variants={{
+                hidden: { y: 60, opacity: 0 },
+                visible: { y: 0, opacity: 1, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] } }
+              }}
+              className="font-headline font-bold text-[clamp(4rem,15vw,100px)] md:text-[180px] leading-[0.9] tracking-tighter uppercase"
+            >
               SELECTED
               <br />
               <span className="outline-text">WORK</span>
-            </h1>
-            <div className="w-24 h-2 bg-primary mt-8"></div>
+            </motion.h1>
+            <motion.div 
+              variants={{
+                hidden: { scaleX: 0 },
+                visible: { scaleX: 1, transition: { duration: 1, ease: "circOut", delay: 1 } }
+              }}
+              className="w-24 h-2 bg-primary mt-8 origin-left"
+            ></motion.div>
           </div>
-          <div className="max-w-md">
-            <p className="text-on-surface-variant text-xl leading-relaxed font-light">
+          <motion.div 
+            variants={{
+              hidden: { y: 30, opacity: 0 },
+              visible: { y: 0, opacity: 1, transition: { duration: 1, ease: "easeOut" } }
+            }}
+            className="max-w-md"
+          >
+            <p className="text-on-surface-variant text-xl leading-relaxed font-light border-l border-white/10 pl-8">
               A curated collection of digital experiences focusing on functional
               luxury, high-performance commerce, and surgical design precision.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </header>
 
-      {/* Filter Bar */}
-      <section className="px-8 mb-16 max-w-[1920px] mx-auto">
-        <div className="flex flex-wrap gap-x-12 gap-y-6 border-b border-outline-variant/20 pb-4">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveFilter(category)}
-              className={`${
-                activeFilter === category
-                  ? "text-primary border-b-2 border-primary -mb-[18px]"
-                  : "text-on-surface-variant hover:text-on-surface"
-              } transition-colors font-headline uppercase tracking-widest text-sm pb-4 relative`}
-            >
-              {category}
-            </button>
-          ))}
+      {/* Filter Bar - Premium Implementation */}
+      <section className="px-6 md:px-8 mb-16 max-w-[1920px] mx-auto overflow-hidden">
+        <div className="relative border-b border-primary/5">
+          {/* Subtle scroll masks */}
+          <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none md:hidden" />
+          <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none md:hidden" />
+          
+          <div className="flex overflow-x-auto no-scrollbar gap-x-10 md:gap-x-16 items-center">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveFilter(category)}
+                className="group py-6 flex-none relative outline-none"
+              >
+                <span className={`
+                  transition-all duration-500 font-headline uppercase tracking-[0.2em] text-[11px] md:text-xs font-bold
+                  ${activeFilter === category 
+                    ? "text-primary neon-text-glow" 
+                    : "text-on-surface-variant/60 group-hover:text-on-surface"
+                  }
+                `}>
+                  {category}
+                </span>
+                
+                {activeFilter === category && (
+                  <motion.div
+                    layoutId="activeCategory"
+                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary z-20"
+                    transition={{ type: "spring", bounce: 0.25, duration: 0.6 }}
+                  >
+                    <div className="absolute inset-0 blur-[4px] bg-primary/50" />
+                  </motion.div>
+                )}
+                
+                {/* Hover indicator */}
+                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-primary/30 group-hover:w-full transition-all duration-500" />
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Featured Work */}
-      <section className="py-20 px-6 md:px-12 bg-surface-container-lowest min-h-screen">
-        <div className="flex justify-between items-end mb-10">
-          <div>
-            <h2 className="font-headline text-5xl md:text-7xl font-bold uppercase tracking-tighter">
-              Selected Work
+      {/* Featured Work Grid */}
+      <section className="py-20 px-6 md:px-12 bg-surface-container-lowest min-h-screen relative z-10">
+        <div className="flex justify-between items-end mb-16">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-headline text-5xl md:text-8xl font-bold uppercase tracking-tighter leading-none">
+              Portfolio <span className="text-primary">/</span>
             </h2>
-          </div>
+          </motion.div>
         </div>
         
         {/* Render projects with scroll-revealing Project cards */}
@@ -263,22 +322,37 @@ export default function WorkPage() {
         </motion.div>
       </section>
 
-      {/* CTA Strip */}
-      <section className="bg-surface-container py-32 px-8">
-        <div className="max-w-[1920px] mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-          <h2 className="font-headline font-bold text-5xl md:text-7xl uppercase max-w-2xl leading-[0.9]">
-            Have a project you&apos;d like to discuss?
-          </h2>
-          <Link className="group flex items-center gap-4" href="/contact">
-            <span className="font-headline font-bold text-5xl md:text-7xl text-primary transition-transform group-hover:-translate-x-4 uppercase">
-              LET&apos;S TALK
-            </span>
-            <span className="material-symbols-outlined text-6xl md:text-8xl text-primary font-light">
-              arrow_right_alt
-            </span>
+      {/* CTA Strip - Enhanced for Premium Feel */}
+      <section className="bg-surface-container py-48 px-8 relative z-10 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="max-w-[1920px] mx-auto flex flex-col items-center text-center gap-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-headline font-bold text-5xl md:text-[120px] uppercase leading-[0.85] tracking-tighter max-w-4xl"
+          >
+            Have a project <br /> <span className="outline-text">to discuss?</span>
+          </motion.h2>
+          <Link className="group relative" href="/contact">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative z-10 flex items-center gap-6 px-12 py-6 border border-primary/20 hover:border-primary transition-colors duration-500 overflow-hidden"
+            >
+              <span className="font-headline font-bold text-3xl md:text-5xl text-primary uppercase transition-transform group-hover:scale-110 duration-500">
+                Let&apos;s Build something
+              </span>
+              <span className="material-symbols-outlined text-4xl md:text-6xl text-primary transition-transform group-hover:translate-x-4 duration-500">
+                arrow_right_alt
+              </span>
+            </motion.div>
+            {/* Hover Glow Effect */}
+            <div className="absolute inset-0 bg-primary/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }
