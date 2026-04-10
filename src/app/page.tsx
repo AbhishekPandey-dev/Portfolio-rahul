@@ -117,7 +117,7 @@ export default function Home() {
             <div className="relative overflow-hidden bg-surface-container h-[400px] md:h-[600px] mb-6">
               <Image alt="Transform Health" className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:hidden" src="/assets/img-mobile/transformhealth.png" fill sizes="100vw" unoptimized />
               <Image alt="Transform Health" className="hidden w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:block md:grayscale md:group-hover:grayscale-0" src="/assets/transformhealth.png" fill sizes="(max-width: 768px) 100vw, 66vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
                 <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Wordpress | UI/UX Design | GSAP | MySQL | Cloudflare</span>
                 <h3 className="font-headline text-4xl font-bold text-white uppercase">www.transformhealthcoalition.org</h3>
               </div>
@@ -134,7 +134,7 @@ export default function Home() {
 
               <Image alt="Nappa dori" className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:hidden" src="/assets/img-mobile/nappadori.png" fill sizes="100vw" unoptimized />
               <Image alt="Nappa dori" className="hidden w-full h-full object-cover transition-all duration-700 group-hover:scale-110 md:block md:grayscale md:group-hover:grayscale-0" src="/assets/nappadori.png" fill sizes="(max-width: 768px) 100vw, 33vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
                 <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">UI/UX Design | Shopify | GSAP | React | Photoswipe</span>
                 <h3 className="font-headline text-4xl font-bold text-white uppercase">www.nappadori.com</h3>
               </div>
@@ -153,7 +153,7 @@ export default function Home() {
                 <source src="/assets/shivanandnarresh.webm" type="video/webm" />
                 <source src="/assets/shivanandnarresh.mp4" type="video/mp4" />
               </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 z-10">
                 <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Shopify | jQuery | AWS | Cloudflare | Klaviyo</span>
                 <h3 className="font-headline text-4xl font-bold text-white uppercase">www.shivanandnarresh.com</h3>
               </div>
