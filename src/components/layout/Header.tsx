@@ -114,7 +114,7 @@ export const Header = () => {
           
           <div className="mt-auto pb-12 mb-safe">
             <p className="text-primary font-headline uppercase font-bold text-sm tracking-widest mb-4">Get In Touch</p>
-            <a href="mailto:hello@rahulsharma.com" className="text-on-surface-variant hover:text-white transition-colors">hello@rahulsharma.com</a>
+            <a href="mailto:rahul@pixelforge.in" className="text-on-surface-variant hover:text-white transition-colors">rahul@pixelforge.in</a>
           </div>
         </div>
       )}
