@@ -32,7 +32,7 @@ export default function ContactPage() {
             <div className="space-y-8 mb-12">
               <div>
                 <span className="text-on-surface-variant text-[10px] uppercase tracking-widest block mb-2">Email</span>
-                <a className="text-primary text-2xl font-medium hover:opacity-80 transition-opacity" href="mailto:hello@rahulsharma.dev">hello@rahulsharma.dev</a>
+                <a className="text-primary text-2xl font-medium hover:opacity-80 transition-opacity" href="mailto:rahul@pixelforge.in">rahul@pixelforge.in</a>
               </div>
               <div>
                 <span className="text-on-surface-variant text-[10px] uppercase tracking-widest block mb-2">WhatsApp</span>
