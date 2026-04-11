@@ -131,7 +131,7 @@ export default function AboutPage() {
                 2022 — PRESENT
               </span>
               <h3 className="text-3xl font-headline font-bold uppercase mt-2">
-                Freelance Consultancy
+                PixelForge - Freelance Consultancy
               </h3>
               <p className="text-on-surface-variant mt-4 text-lg max-w-xl">
                 I build end-to-end digital experiences for startups that want to

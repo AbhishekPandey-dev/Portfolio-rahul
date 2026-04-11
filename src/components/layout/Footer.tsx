@@ -13,7 +13,7 @@ export const Footer = () => {
       </div>
       <div className="flex gap-6 items-center flex-wrap justify-center">
         <a className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-primary hover:text-primary transition-all" href="mailto:rahul@pixelforge.in">
-          <span className="material-symbols-outlined text-sm">alternate_email</span>
+          <span className="material-symbols-outlined text-sm">mail</span>
         </a>
         <a className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-primary hover:text-primary transition-all" href="#">
           <span className="material-symbols-outlined text-sm">share</span>
