@@ -36,7 +36,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <span className="text-on-surface-variant text-[10px] uppercase tracking-widest block mb-2">WhatsApp</span>
-                <a className="text-primary text-xl font-medium flex items-center gap-2 group" href="#">
+                <a className="text-primary text-xl font-medium flex items-center gap-2 group" href="https://wa.me/918368260938">
                   Send a WhatsApp Message 
                   <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </a>
