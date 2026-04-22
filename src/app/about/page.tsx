@@ -31,8 +31,8 @@ export default function AboutPage() {
             <div className="aspect-[3/4] bg-surface-container-highest overflow-hidden">
               <Image
                 alt="Rahul Sharma"
-                className="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 transition-transform duration-700"
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2000&auto=format&fit=crop"
+                className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700"
+                src="/images/image.png"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
